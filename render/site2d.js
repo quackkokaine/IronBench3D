@@ -90,9 +90,15 @@
     const { faceX, boreY, spec, hgEndX } = g; const muzzleX = faceX + IN(spec.len - .55); const T = THREAD[spec.pitch] || THREAD['1/2x28'];
     const r = IN(spec.dia / 2), tl = spec.threaded ? IN(T.len) : 0, shoulderX = muzzleX - tl, rt = IN(T.dia / 2);
     const cyl = (x1, x2, rad) => { const gr = L.createLinearGradient(0, boreY - rad, 0, boreY + rad); gr.addColorStop(0, '#2a2b2e'); gr.addColorStop(.28, '#5d6066'); gr.addColorStop(.42, '#2b2c30'); gr.addColorStop(.8, '#121315'); gr.addColorStop(1, '#060607'); L.fillStyle = gr; L.fillRect(x1, boreY - rad, x2 - x1, rad * 2); };
+    // barrel nut (under the rail's rear, visible through the M-LOK slots)
+    { const nr = IN(.62), gr = L.createLinearGradient(0, boreY - nr, 0, boreY + nr); gr.addColorStop(0, '#303236'); gr.addColorStop(.3, '#4a4d52'); gr.addColorStop(.55, '#1f2023'); gr.addColorStop(1, '#0a0a0b'); L.fillStyle = gr; L.fillRect(faceX - IN(.05), boreY - nr, IN(.9), nr * 2);
+      L.fillStyle = 'rgba(0,0,0,.35)'; for (let i = 1; i < 4; i++) L.fillRect(faceX - IN(.05) + i * IN(.22), boreY - nr, 1.5, nr * 2); }
     cyl(faceX - IN(.1), shoulderX, r);
+    // gas tube from the receiver to the gas block, then the low-profile gas block (seen through the slots)
     const gbX = faceX + IN(spec.gas - .25);
-    if (!hgEndX || gbX + IN(.45) > hgEndX) { const h = IN(.5); const gr = L.createLinearGradient(0, boreY - h, 0, boreY + h); gr.addColorStop(0, '#3d3f43'); gr.addColorStop(.35, '#1f2023'); gr.addColorStop(1, '#0a0a0b'); L.fillStyle = gr; L.beginPath(); L.roundRect(gbX - IN(.4), boreY - IN(.45), IN(.8), IN(.95), IN(.06)); L.fill(); }
+    { const ty = boreY - IN(.58), tr = IN(.09); const gr = L.createLinearGradient(0, ty - tr, 0, ty + tr); gr.addColorStop(0, '#6b6e73'); gr.addColorStop(.5, '#3a3c40'); gr.addColorStop(1, '#151618'); L.fillStyle = gr; L.fillRect(faceX - IN(.1), ty - tr, gbX - faceX, tr * 2); }
+    { const h = IN(.5); const gr = L.createLinearGradient(0, boreY - h, 0, boreY + h); gr.addColorStop(0, '#3d3f43'); gr.addColorStop(.35, '#1f2023'); gr.addColorStop(1, '#0a0a0b'); L.fillStyle = gr; L.beginPath(); L.roundRect(gbX - IN(.4), boreY - IN(.72), IN(.8), IN(1.17), IN(.06)); L.fill();
+      L.fillStyle = '#0b0b0c'; L.beginPath(); L.arc(gbX + IN(.15), boreY - IN(.3), IN(.05), 0, 7); L.fill(); }
     if (spec.threaded) {
       L.fillStyle = '#0d0e0f'; L.fillRect(shoulderX - 1, boreY - r, 2, r * 2); cyl(shoulderX, muzzleX, rt);
       if (!g.hasMuzzle) {
@@ -198,14 +204,12 @@
       L.fillStyle = g2; L.beginPath(); L.arc(fx, fy, fr, 0, 7); L.fill(); L.strokeStyle = 'rgba(255,255,255,.12)'; L.lineWidth = 1; for (let i = -3; i <= 3; i++) { L.beginPath(); L.moveTo(fx + i * fr * .22, fy - fr * .78); L.lineTo(fx + i * fr * .22, fy + fr * .78); L.stroke(); }
       boxes.fa = [fx - fr, fy - fr, fr * 2, fr * 2]; }
 
-    // handguard: butts the upper face, rail tops flush, dark interior behind the slots
+    // handguard: butts the upper face, rail tops flush. M-LOK slots are open, so the barrel nut, gas tube,
+    // gas block and backdrop show through them, as in real product photos.
     { const dH = fit(H, o.hgLen), hTopRow = H.a.railTopRow ?? mode(H.m.top, H.c.width * .25, H.c.width * .85);
       dH.h = H.h * (H.e.size_in[0] / H.w) * S; // keep the photo's own proportions if a stand-in is stretched to a new length
       const hX = faceX - IN(.04), hY = railTopY - hTopRow * (dH.h / H.h);
-      L.fillStyle = '#17181a'; const HW = H.c.width, sx = dH.w / HW, sy = dH.h / H.h; L.beginPath(); let st = false;
-      for (let a = 0; a < HW; a++) { if (H.m.top[a] < 0) continue; const X = hX + a * sx, Y = hY + (H.m.top[a] + 3) * sy; st ? L.lineTo(X, Y) : (L.moveTo(X, Y), st = true); }
-      for (let a = HW - 1; a >= 0; a--) { if (H.m.bot[a] < 0) continue; L.lineTo(hX + a * sx, hY + (H.m.bot[a] - 3) * sy); }
-      L.closePath(); L.fill(); draw('handguard', H, dH, hX, hY); }
+      draw('handguard', H, dH, hX, hY); }
 
     // optic: clamp base gripping the rail
     if (O) { const dO = fit(O, O.e.size_in[0] || 5.6); draw('optic', O, dO, uX + IN(1.25), railTopY + IN(.24) - dO.h); }

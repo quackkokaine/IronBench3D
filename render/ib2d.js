@@ -141,3 +141,40 @@ IB.solve=(P,upperBody=7.05)=>{const U=P.upper,Lw=P.lower,UL=IB.upperLugs(U),LP=I
 IB.render=(opts={})=>{IB.sol=IB.sol||IB.solve(IB.P);return window.__compose5(IB.P,{...IB.cap,lowerLen:IB.sol.lowerLen,...opts});};
 IB.cap={cap1:'AR-15 · 5.56 NATO · 16" barrel · 15" M-LOK rail · EOTech 512',cap2:'Composited from Palmetto State Armory product photos'};
 })();
+
+// ---- v9 handguard fixes (see docs/composite-spec.md section 12) ----
+(function(){
+const IB=window.IB;
+// strict background cut: only near-white, low-colour pixels count as background, so light / coloured finishes
+// (blue titanium, champagne, FDE) are not eaten by the flood fill
+IB.cutStrict=(bm,minLum=200,maxSide=1100,tol=8)=>{const k=Math.min(1,maxSide/Math.max(bm.width,bm.height));const W=Math.round(bm.width*k),H=Math.round(bm.height*k);const c=document.createElement('canvas');c.width=W;c.height=H;const x=c.getContext('2d',{willReadFrequently:true});x.fillStyle='#fff';x.fillRect(0,0,W,H);x.drawImage(bm,0,0,W,H);
+ const im=x.getImageData(0,0,W,H),d=im.data,bg=new Uint8Array(W*H),st=[];const lum=i=>(d[i]+d[i+1]+d[i+2])/3,sat=i=>Math.max(d[i],d[i+1],d[i+2])-Math.min(d[i],d[i+1],d[i+2]);
+ const ok=p=>lum(p*4)>minLum&&sat(p*4)<30;
+ for(let a=0;a<W;a++)for(const y of [0,H-1]){const p=y*W+a;if(ok(p)&&!bg[p]){bg[p]=1;st.push(p);}}for(let y=0;y<H;y++)for(const a of [0,W-1]){const p=y*W+a;if(ok(p)&&!bg[p]){bg[p]=1;st.push(p);}}
+ while(st.length){const q=st.pop(),qx=q%W,qy=q/W|0,lq=lum(q*4);for(const r of [qx>0?q-1:-1,qx<W-1?q+1:-1,qy>0?q-W:-1,qy<H-1?q+W:-1])if(r>=0&&!bg[r]&&ok(r)&&Math.abs(lum(r*4)-lq)<tol){bg[r]=1;st.push(r);}}
+ for(let p=0;p<W*H;p++){const i=p*4;if(bg[p]){d[i+3]=0;continue;}const px=p%W,py=p/W|0;let e=false;for(const r of [px>0?p-1:-1,px<W-1?p+1:-1,py>0?p-W:-1,py<H-1?p+W:-1])if(r>=0&&bg[r])e=true;if(e)d[i+3]=Math.min(255,Math.max(0,(255-lum(i))*3));}
+ for(let y=0;y<H;y++)for(let a=0;a<W;a++)if(a<3||y<3||a>=W-3||y>=H-3)d[(y*W+a)*4+3]=0;x.putImageData(im,0,0);return c;};
+// bbox trim; a "border line" row is removed only when it is isolated (near-empty rows above AND below).
+// The old rule (any edge-to-edge solid row) deleted the middle band of long parts like handguards.
+IB.trimSafe=(c,th=60)=>{const x=c.getContext('2d',{willReadFrequently:true}),W=c.width,H=c.height,im=x.getImageData(0,0,W,H),d=im.data;
+ const rc=new Array(H).fill(0);for(let y=0;y<H;y++)for(let a=0;a<W;a++)if(d[(y*W+a)*4+3]>170)rc[y]++;
+ for(let y=1;y<H-1;y++)if(rc[y]>W*.93&&rc[y-1]<W*.05&&rc[y+1]<W*.05)for(let a=0;a<W;a++)d[(y*W+a)*4+3]=0;
+ for(let i=3;i<d.length;i+=4)if(d[i]<th)d[i]=0;
+ const r2=new Array(H).fill(0),cc=new Array(W).fill(0);for(let y=0;y<H;y++)for(let a=0;a<W;a++)if(d[(y*W+a)*4+3]){r2[y]++;cc[a]++;}
+ let y1=0,y2=H-1,x1=0,x2=W-1;while(y1<H-1&&r2[y1]<W*.015)y1++;while(y2>y1&&r2[y2]<W*.015)y2--;while(x1<W-1&&cc[x1]<H*.015)x1++;while(x2>x1&&cc[x2]<H*.015)x2--;
+ x.putImageData(im,0,0);const n=document.createElement('canvas');n.width=x2-x1+1;n.height=y2-y1+1;n.getContext('2d').drawImage(c,x1,y1,n.width,n.height,0,0,n.width,n.height);return n;};
+// enclosed see-through openings (M-LOK slots, lightening cuts) become real transparency with soft rims
+IB.openSlots=(c,lumT=150)=>{const x=c.getContext('2d',{willReadFrequently:true}),W=c.width,H=c.height,im=x.getImageData(0,0,W,H),d=im.data;const lab=new Uint8Array(W*H);let n=0;
+ const L=q=>(d[q*4]+d[q*4+1]+d[q*4+2])/3;const isL=q=>d[q*4+3]>0&&L(q)>lumT;
+ for(let p0=0;p0<W*H;p0++){if(lab[p0]||!isL(p0))continue;const st=[p0],blob=[];lab[p0]=1;
+  while(st.length){const q=st.pop();blob.push(q);const qx=q%W,qy=q/W|0;for(const r of [qx>0?q-1:-1,qx<W-1?q+1:-1,qy>0?q-W:-1,qy<H-1?q+W:-1])if(r>=0&&!lab[r]&&isL(r)){lab[r]=1;st.push(r);}}
+  if(blob.length>=6){n++;for(const q of blob)d[q*4+3]=0;
+   for(const q of blob){const qx=q%W,qy=q/W|0;for(const r of [qx>0?q-1:-1,qx<W-1?q+1:-1,qy>0?q-W:-1,qy<H-1?q+W:-1]){if(r<0||d[r*4+3]===0)continue;const l=L(r);if(l>70)d[r*4+3]=Math.min(d[r*4+3],Math.max(0,(lumT+40-l)*3));}}}}
+ x.putImageData(im,0,0);return n;};
+// only black-anodized parts get the black-tone + desaturate pass; coloured finishes keep their colour
+IB.isBlack=c=>{const d=c.getContext('2d').getImageData(0,0,c.width,c.height).data;const L=[];for(let i=0;i<d.length;i+=16)if(d[i+3]>200)L.push((d[i]+d[i+1]+d[i+2])/3);L.sort((a,b)=>a-b);return L[L.length>>1]<75;};
+IB.orig=u=>u.replace(/\/cache\/[0-9a-f]+\//,'/');   // PSA full-size original (1920px) instead of the 546px cache copy
+IB.prepHandguard=async u=>{const bm=await IB.bitmap(IB.orig(u));let c=IB.cutStrict(bm);c=IB.keepMain(c);c=IB.trimSafe(c);
+ for(let i=0;i<2;i++){const a=IB.pcaAngle(c);if(Math.abs(a)>.01&&Math.abs(a)<1.2)c=IB.trimSafe(IB.rotate(c,-a));}
+ const black=IB.isBlack(c);if(black){IB.toneBlack(c,34);IB.desat(c);}IB.openSlots(c,black?150:185);return {c,w:c.width,h:c.height,m:IB.mask(c),black,url:IB.orig(u)};};
+})();

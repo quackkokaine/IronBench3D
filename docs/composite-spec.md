@@ -144,3 +144,22 @@ What I learned:
 - The previous flash-hider fit made it ~1.0" in diameter, too fat. Muzzle devices are now sized to real dimensions (length × diameter), not by the photo's aspect.
 - PSA spec lists worth pulling for every complete rifle: Barrel Length, Barrel Profile, Gas System, Muzzle Thread, Diameter at Gas Block, Gas Block Type, Muzzle Device, Handguard Type, Length (OAL), Weight.
 - Both Guardsman rifles: taper profile, .750 low-profile pinned gas block, 1/2x28 threads, A2 flash hider. Carbine gas on the 10.3", mid-length on the 16".
+
+## 12. Handguard fix (v9): open M-LOK slots
+Problem: the middle row of M-LOK slots rendered as one solid black bar, and the 9.75" blue-titanium rail turned black. There were four causes:
+1. The slots were made transparent, then a dark "interior" was painted behind the rail, so every opening showed black.
+2. `trim()` deleted any edge-to-edge solid row as a "border line". A rail's body runs end to end, so it deleted real rail.
+3. The gradient background flood leaked into light, low-saturation finishes such as blue titanium.
+4. The black-tone pass ran on a colored part.
+
+Rules now:
+- Handguards are cut from PSA's full-size originals with `IB.prepHandguard()`:
+  - strict cut: background = near-white only
+  - `trimSafe`: only remove isolated lines
+  - black-tone/desaturate only if the part is actually black
+  - `openSlots`: enclosed see-through openings become real transparency with soft rims
+- No dark backing behind the rail. The renderer draws what is really inside a free-float rail, so it shows through the slots the way it does in real product photos:
+  - barrel nut: Ø1.25", 0.9" long at the receiver face
+  - gas tube: Ø0.18", 0.58" above the bore, from the receiver to the gas block
+  - low-profile gas block: at face + gas length − 0.25", always drawn
+- Check other long parts (uppers, barrels, stocks) for the same `trim()` line-deletion bug when they are re-processed.
