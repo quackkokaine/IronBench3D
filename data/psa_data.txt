@@ -1,0 +1,307 @@
+upper|69.99|PSA AR-15 Stripped Upper Receiver|fa=1
+upper|89.99|Sabre-15 Assembled Upper Receiver, Champagne|fa=1
+upper|89.99|Sabre-15 Assembled Upper Receiver, Moss Green|fa=1
+upper|103.99|Spikes Tactical Flat Top Multi-Caliber Stripped Upper Receiver, Hardcoat Anodized Black - SFT50M4|fa=1
+upper|108.99|Yankee Hill Machine .223 Rem/5.56 Flat Top Stripped Upper Receiver, Hardcoat Anodized Matte Black - 110|fa=1
+upper|110.99|Luth-AR Stripped NC15 Forged Upper Receiver - FTT-EA|fa=1
+upper|139.99|Harrington & Richardson BLEM M16A2 Stripped Upper Receiver w/ M4 Feed Ramp, Black|fa=1
+upper|155|Harrington & Richardson BLEM M16A2 Stripped Upper Receiver, Gray|fa=1;w=0.53
+upper|159.99|Harrington & Richardson "Slickside" Upper Receiver, Gray|
+upper|221.99|Wilson Combat .223 Rem/5.56 Billet Upper Receiver for AR-15 Style Rifle, Mil-Spec Hardcoat Anodized Black - TR-UPPER-BIL|
+barrel|102.99|Diamondback AR-15 223 Rem & 556 NATO 16" 1:8 Barrel, Black Nitride Finish - 556M16M50B8R|cal=556;len=16;gas=9
+barrel|156.99|Faxon Firearms Duty Mid-Length Button Rifled Gunner Barrel 5.56x45mm 14.50", Black|cal=556;len=14.5;gas=9;heavy=1;w=1.29
+barrel|161.99|Faxon Firearms Duty Mid-Length Button Rifled Pencil Barrel 5.56x45mm 14.50", Black|cal=556;len=14.5;gas=9;w=1.15
+barrel|161.99|Faxon Duty Series 12.5" 5.56 Nitride Barrel- 15A58M125NGQ|cal=556;len=12.5;gas=7
+barrel|169.99|Faxon Firearms Duty HBAR Button Rifled Barrel 5.56x45mm 16", Black|cal=556;len=16;gas=9;heavy=1;w=1.65
+barrel|172.99|Faxon Firearms Duty Barrel 5.56x45mm 16", Black - 15A58M16NGQ|cal=556;len=16;gas=9
+barrel|197.99|Faxon Firearms Mid-Length Button Rifled Socom Barrel w/Pinned Gas Block 5.56x45mm 16", Black|cal=556;len=16;gas=9;heavy=1;w=1.65
+barrel|216.99|Faxon Firearms Mid-Length Button Rifled Pencil Barrel w/Pinned Gas Block 5.56x45mm 16", Black|cal=556;len=16;gas=9;w=1.2
+barrel|239.99|Faxon Firearms Mid-Length Button Rifled Pencil Barrel 5.56x45mm 16", Black|cal=556;len=16;gas=9;w=1.19
+barrel|241.99|Faxon Firearms Mid-Length Button Rifled Gunner Barrel 5.56x45mm 16", Black|cal=556;len=16;gas=9;heavy=1;w=1.35
+barrel|279.99|FN America AR-15 16" Barrel 1:7 Twist Button Broached, Black - 20100046|cal=556;len=16;gas=9
+barrel|349.99|FN Barrel 556NATO 14.7" Black Hammer Forged Carbine AR Rifles|cal=556;len=14.7;gas=9
+barrel|397.99|Bravo Company Mid-Length Enhanced Lightweight Barrel Assembly 5.56x45mm 14.50", Black|cal=556;len=14.5;gas=9
+barrel|79.99|PSA AR-15 Barrel 7.5" .300 Blackout Pistol-Length Nitride - 5165449963|cal=300;len=7.5;gas=4
+barrel|109.99|PSA 16" Pistol-Length 300AAC Blackout Nitride Barrel - 5165449967|cal=300;len=16;gas=4
+barrel|151.99|Faxon Firearms Duty Gunner Button Rifled Barrel .300 AAC Blackout 10.50", Black|cal=300;len=10.5;gas=7;heavy=1;w=1.1
+barrel|179.99|Faxon Firearms Match Pistol-Length 5R Button Rifled Gunner Barrel .300 AAC Blackout 10.50", Black|cal=300;len=10.5;gas=4;heavy=1;w=1.1
+barrel|202.99|CMMG .300 Blackout 16.1" Medium Taper Barrel Sub-Assembly, Salt Bath Nitride Black - 30D120A|cal=300;len=16.1;gas=12
+barrel|257.99|Wilson Combat .300 Blackout 16" Match Grade 6 Groove Barrel, Matte Bead Blasted Stainless - TR-300RCPG16RT7|cal=300;len=16;gas=9;w=1.619
+barrel|327.99|Odin AR-15 300 Blackout 6.1" Threaded Barrel - B30016PTGBLK|cal=300;len=6.1;gas=4;w=1
+barrel|89.99|PSA 4" PCC 9mm 1/10 Nitride Barrel Thread Pitch: 1/2x28|cal=9mm;len=4;gas=0
+barrel|108.99|Angstadt Arms Barrel 9mm 6" Black 1/2x28 TPI Thread AR Rifles|cal=9mm;len=6;gas=0
+barrel|109.99|PSA 10.5" PCC 9mm 1/10 Melonite Barrel Thread Pitch: 1/2x28|cal=9mm;len=10.5;gas=0
+barrel|115.99|Faxon Firearms Duty Blowback Button Rifled Pistol Caliber Taper Barrel 9mm 8.50", Black|cal=9mm;len=8.5;gas=0;w=0.81
+barrel|124.99|Faxon 10.5" 9mm Pistol Caliber Carbine Barrel, Tapered, 4150, Nitride - 15A910N10NLQ|cal=9mm;len=10.5;gas=0;w=1.03
+barrel|129.99|PSA 7" PCC 9mm 1/10 Nitride Tri-Lug Barrel With Thread Protector Thread Pitch: 1/2x28|cal=9mm;len=7;gas=0
+barrel|133.99|Faxon 16" 9mm Pistol Caliber Carbine Barrel, Tapered, 4150, Nitride|cal=9mm;len=16;gas=0;w=1.34
+barrel|202.99|Faxon Firearms Blowback Button Rifled Pistol Caliber Taper Barrel 9mm 16", Black|cal=9mm;len=16;gas=0;w=1.34
+barrel|251.99|Ballistic Advantage Premium DMR Rifle-Length Barrel 6.5 Grendel 20"|cal=65g;len=20;gas=12;w=2.89
+bcg|109.99|Toolcraft Non-Logoed Premium 5.56 Nickel Boron BCG with Carpenter 158 Bolt|cal=556,300;coat=Nickel boron
+bcg|119.99|PSA Logoed Premium 5.56 Nickel Boron BCG with Carpenter 158 Bolt - 516446450|cal=556,300;coat=Nickel boron
+bcg|129.99|PSA Guardsman-15 5.56 Phosphate Bolt Carrier Group with Carpenter 158 Bolt|cal=556,300;coat=Phosphate
+bcg|150.99|WMD Guns Bolt Carrier Group Without Hammer, NiB-X - NIBXBCG-0001|cal=556,300;coat=Nickel boron
+bcg|166.99|WMD Guns AR-15 Bolt Carrier Group with Hammer, Nib-X Coating - NIBXBCG-0002|cal=556,300;coat=Nickel boron
+bcg|180.99|KAK Industry K-Spec Enhanced Bolt Carrier Group 5.56x45mm/.300 AAC Blackout, Black|cal=556,300;coat=Phosphate;w=0.72
+bcg|195.99|Next Level Armament - 5.56 Full Bolt Carrier Group (DLC coated) - NLX202|cal=556,300;coat=DLC
+bcg|141.99|Odin Works 6.5 Grendel Type2 Black Nitride Complete BCG, Black - ACC-6.5-BCG|cal=65g;coat=Nitride
+gasblock|17.99|Luth-AR .750" Internal Bore Gas Block, Black - GB-LP750|dia=.750
+gasblock|27.49|LBE Unlimited .750 Gas Block With Upper Receiver Height Rail, Black - ARRGB-UH|dia=.750
+gasblock|40.99|CMC Low Profile AR-15 Gas Block .750, Nitride Finish - 81611|dia=.750;w=0.041
+gasblock|90.99|Superlative Arms Solid Set Screw Direct Impingement Adjustable Gas Block 0.875" x 1", Tan|dia=.875;adj=1
+gasblock|99.99|Strike Industries Collar Adjustable Gas Block for All 0.750" Gas Block Journal, Black - SI-AR-CAGB|dia=.750;adj=1
+gasblock|101.99|Superlative Arms Clamp-On Direct Impingement Adjustable Gas Block 0.875" x 1", Black|dia=.875;adj=1
+gasblock|142.99|JP Enterprises D2 2-Piece Low-Profile Adjustable Gas Block w/Detent Adjustment 0.75", Black|dia=.750;adj=1
+gastube|10.99|LBE Unlimited Carbine Length AR-15 Gas Tube - ARGTC|gas=7
+gastube|12.99|Luth-AR Pistol Length AR-15 Gas Tube - BL-04B|gas=4
+gastube|13.99|Luth-AR Carbine Length Gas Tube, Fits AR-15 - BL-04A|gas=7
+gastube|14.99|Armaspec Rifle-Length Gas Tube, Silver - ARM653-RL|gas=12
+gastube|15.99|Luth-AR Mid Length Gas Tube, Fits AR-15 - BL-04C|gas=9
+gastube|17.99|Doublestar Corp. Pistol-Length Gas Tube 6.69", Stainless Steel|gas=4
+gastube|18.99|Wilson Combat Gas Tube, Mid-Length, AR-15 - TRGTM|gas=9
+gastube|22.19|LBE Unlimited AR-15 Rifle Length Gas Tube - ARGTR|gas=12
+gastube|23.99|Yankee Hill Machine Co Carbine Length Gas Tube with Roll Pin, Black|gas=7
+gastube|65.99|Phase 5 Pigtail Pistol-Length AR-15 Gas Tube - PIGTAIL|gas=4
+handguard|99.99|Sabre-15 9.75" Quad Rail, Black|len=9.75;mount=Picatinny quad rail
+handguard|119.99|Sabre-15 9.75" Quad Rail, Moss Green|len=9.75;mount=Picatinny quad rail
+handguard|159.99|Sabre-15 13" Quad Rail, Blue Titanium|len=13;mount=Picatinny quad rail
+handguard|199.99|Sabre-15 6.75" QDSM Rail, Champagne|len=6.75;mount=M-LOK
+handguard|199.99|Sabre-15 6.75" QDSM Rail, Burnt Bronze|len=6.75;mount=M-LOK
+handguard|199.99|Sabre-15 9.75" QDSM Rail, Blue Titanium|len=9.75;mount=M-LOK
+handguard|200.99|Rise Armament 15" Lightweight M-LOK Free Floating AR-15 Handguard - RA-905-150|len=15;mount=M-LOK
+handguard|219.99|Sabre-15 15" QDSM Rail, Black|len=15;mount=M-LOK
+handguard|219.99|Sabre-15 13" QDSM Rail, Moss Green|len=13;mount=M-LOK
+handguard|239.99|Sabre-15 15" QDSM Rail, FDE|len=15;mount=M-LOK
+charging|29.99|Lead Star Arms Ravage AR-15 Charging Handle, Black|
+charging|49.99|Breek Arms - Warhammer MOD2 Ambi Charging Handle - BRK522-RGREEN|ambi=1
+charging|49.99|Breek Arms Warhammer MOD2 MICRO Ambi Charging Handle - BRK555-FDE|ambi=1
+charging|67.99|Next Level Armament - 5.56 Simplified Ambi Charging Handle - NLX737|ambi=1
+charging|70.99|Breek Arms Sledgehammer Ambi Charging Handle, FDE - BRK6015-FDE|ambi=1
+charging|72.99|Armaspec Victory Compact Charging Handle, Black - ARM163-BLK|
+charging|94.99|Reptilia Puller, AR15 Charging Handle, FDE - 100-319|
+charging|130.99|Geissele Automatics URG-I Airborne Charging Handle, Desert Dirt - 05-664S|
+dustcover|7.46|Spikes Tactical Ejection Port Door for AR-15 Style Rifle - SED7000|
+dustcover|8.99|Aim Sports AR-15 Dust Cover Assembly - ARDCA|
+dustcover|15.95|Battle Arms AR-15 Laser Engraved Dust Cover - BALSDCS|
+dustcover|15.99|Yankee Hill Machine Co Dust Cover 300 Blackout for AR Rifles, Black - YHM-111-300|
+dustcover|16.99|Strike Industries .223 AR Enhanced Ultimate Dust Cover, FDE - SI-AR-UDC-E-03-223-FDE|
+dustcover|20.99|Sons of Liberty Gun Works Ejection Port Cover Assembly, Black|
+dustcover|24.99|Timber Creek Billet Dust Cover, Black - AR BDC BL|
+dustcover|53.49|Forward Controls Design EPC Single Dimple TDP Spec Ejection Port Cover, Flat Dark Earth|
+fa|7.59|Tacfire Forward Assist for AR-15 Rifle - MAR094|
+fa|12.95|PSA AR15 Forward Assist Assembly - 7007|
+fa|16.39|LBE Unlimited Teardrop Forward Assist Assembly, Black - ARTDFA|
+fa|18.99|Luth-AR Teardrop Forward Assist Assembly - UR-08-T|
+fa|21.99|Strike Industries Lightweight AR Forward Assist, Flat Dark Earth - SI-AR-S-FA-FDE|
+fa|24.99|Timber Creek AR Forward Assist, Black|
+fa|44.99|Radian Weapons Forward Assist for AR-15, Black Anodized - R0231|
+fa|45.99|Forward Controls Design Vertical Serrated Low Snag Forward Assist, Black|
+lower|55.29|Ruger AR-556 Stripped Lower Receiver, Black|cal=556,300,65g,9mm
+lower|69.99|White Label Armory Forged Stripped AR-15 Lower Receiver|cal=556,300,65g,9mm
+lower|79.99|PSA PA-15 "NJ-15" Stripped Lower Receiver|cal=556,300,65g,9mm
+lower|84.99|Franklin Armory FAI-15 Stripped Lower, Black|cal=556,300,65g,9mm
+lower|89.99|PSA "Virginia-15" AR-15 Stripped Lower Receiver|cal=556,300,65g,9mm
+lower|99.99|Sabre-15 Stripped Lower Receiver, Champagne|cal=556,300,65g,9mm
+lower|99.99|Sabre-15 Stripped Lower Receiver, Blue Titanium|cal=556,300,65g,9mm
+lower|99.99|Sabre-15 Stripped Lower Receiver, FDE|cal=556,300,65g,9mm
+trigger|79.99|PSA Custom AR Trigger Single-Stage Flat Drop-In Match Grade - 116055|stage=1;flat=1
+trigger|89.99|Sabre Claw Two-Stage Trigger - Black DLC Coated|stage=2
+trigger|107.99|Rise Armament RA-140 "Join or Die" Flat Trigger - RA-140F-JOD|stage=1;flat=1
+trigger|135.99|Timney Impact AR Trigger Curved 3lb, Black - IMPACT-AR|stage=1;pull=3
+trigger|140.99|TriggerTech AR-15 Duty Curved Single-Stage 3.50 lbs Trigger - AH0-SDB-33-NNC|stage=1;pull=3.5
+trigger|189.99|Midwest Industries Flat Trigger Single-Stage Drop-In, Black|stage=1;flat=1
+trigger|195.99|Wilson Combat 3.5 to 4 lb Semi-Auto Tactical Trigger Unit Two-Stage Drop-In|stage=2;pull=4
+trigger|260.99|Rise Armament Advanced Performance Trigger, Red - RA-535-RED-ARP|stage=1
+trigger|325.99|TriggerTech AR15 Single-Stage Diamond Pro Curved Trigger|stage=1
+trigger|475.99|Geissele HK MR 556 Trigger Two-Stage, Black|stage=2
+grip|4.99|Luth-AR A2 Pistol Grip, Black|
+grip|13.99|Larue A-Peg Grip, Flat Dark Earth|
+grip|18.99|Timber Creek - Greyman Pistol Grip, Black - G PG BL|
+grip|19.99|B5 Systems P-Grip 22K, ODG - PGR-1675|
+grip|19.99|B5 Systems Type C P-Grip, Coyote Brown - PGR-1523|
+grip|27.99|B5 Systems Type 22 P-Grip, Multicam Black - PGR-1473|
+grip|36.99|Ergo TDX-0 Flat-Top Zero Angle Pistol Grip, Black - 4020-BK|
+grip|49.89|Edgar Sherman Design Granite Grip-B Coarse Textured Grip w/Beavertail, Black|
+grip|95.99|VZ Grips Operator II Gen 2 Rifle Grip, Black/Gray|
+grip|112.99|Brigand Arms Carbon Black Pistol Grip, Black|
+safety|10.79|CMMG Single-Sided Safety Selector, Black|
+safety|37.99|Geissele Posi-Snap Safety Selector, Black|
+safety|40.99|Timber Creek Greyman Ambi Safety Selector, Urban - G Ambi SS U|ambi=1
+safety|42.99|Armaspec SFT 45/90, Safety Selector, Flat Dark Earth - ARM113FDE|
+safety|45.99|Tyrant Designs CNC NexGen 45/90 Ambidextrous Safety Selector, Red|ambi=1
+safety|50.99|Phase 5 90-deg Ambidextrous Safety Selector, Red|ambi=1
+safety|62.95|Battle Arms AR-15 BAD-ASS-LITE Ambidextrous Safety Selector 90/60, OD Green - BADASSLITEODG|ambi=1
+safety|65.99|Trigger Tech AR Safety, Stainless|
+safety|67.99|Reptilia Picker Ambi Safety Selector 75/90 degree, Black - 100-307|ambi=1
+safety|90.25|Forward Controls Design ASF-90 Ambi Safety 90 Degree Standard Levers - ASF-90|ambi=1
+magrel|5.99|Lead Star Arms Ravage Magazine Release Button, Black|
+magrel|10.99|Sons of Liberty Gun Works Magazine Release, Black|
+magrel|13.99|Geissele Ultra Duty Mag Release Button, Black|
+magrel|20.99|Battle Arms Enhanced Modular Magazine Release, Black|ext=1
+boltcatch|6.99|Luth-AR Bolt Catch|
+boltcatch|8.19|CMMG Bolt Catch|
+boltcatch|12.49|PSA Custom Lightweight Skeletonized Bolt Catch - 116017|
+boltcatch|14.99|Sons of Liberty Gun Works Bolt Catch, Black|
+boltcatch|25.99|Luth-AR The Paddle Oversized Bolt Catch, Black|big=1
+pins|28.99|Geissele Ultra Duty Checkered Takedown Pin Set, Black|big=1
+buffer|15.99|TacFire Long Buffer, Silver|cal=556,300,65g
+buffer|16.09|TacFire A2 Buffer, Gold|cal=556,300,65g
+buffer|64.99|JP Enterprises Low Mass Recoil Buffer, Red|cal=556,300,65g
+buffer|72.99|Sons of Liberty Gun Works H2 Buffer|cal=556,300,65g;oz=4.7
+buffer|150.99|KynSHOT Marksman Recoil Buffer|cal=556,300,65g
+buffer|160.99|KynSHOT Recoil Buffer|cal=556,300,65g
+buffer|173.99|Primary Weapons Systems H4 Enhanced Carbine Buffer, Black|cal=556,300,65g;oz=5.6
+buffertube|66.99|Forward Controls Design Receiver Extension, Black|tube=mil
+buffertube|80.99|Geissele Premium Mil-Spec Buffer Tube, Desert Dirt|tube=mil
+spring|5.59|Aero Precision Carbine Buffer Spring, Stainless|
+spring|16.99|Daniel Defense Carbine Buffer Spring, Black|
+spring|22.49|Tactical Springs LLC Standard Power Carbine Buffer Spring|
+spring|22.49|Tactical Springs LLC Extra Power Carbine Buffer Spring|
+endplate|5.99|Sons of Liberty Gun Works Receiver End Plate, Black|
+endplate|16.79|Sport Ridge QD End Plate, Black|qd=1
+endplate|21.99|Timber Creek Greyman Quick Disconnect End Plate, Forest|qd=1
+endplate|24.99|Timber Creek Greyman Quick Disconnect End Plate, Desert|qd=1
+mag|6.99|IMG AR-15 30rd Magazine 223/5.56 - AR-0009|cal=556,300;cap=30;mat=Steel
+mag|17.39|ASC AR-15 .223 REM/5.56MM 30rd Magazine, FDE|cal=556,300;cap=30;mat=Stainless steel
+mag|16.99|Magpul PMAG M3 .300 Blackout 30rd Magazine, OD Green - MGMPI800ODG|cal=300,556;cap=30;mat=Polymer
+mag|18.79|MEAN ExoMag 10rds 9mm, Black|cal=9mm;cap=10;mat=Polymer
+mag|20.69|MEAN ExoMag 15rds 9mm, Black|cal=9mm;cap=15;mat=Polymer
+mag|23.49|MEAN ExoMag 20rds 9mm, Black|cal=9mm;cap=20;mat=Polymer
+mag|32.89|MEAN ExoMag 40rds 9mm, Black|cal=9mm;cap=40;mat=Polymer
+stock|29.99|PSA Classic M4 Stock ODG|tube=mil
+stock|31.99|Reptilia RECC-E Carbine Stock QD Front End, Black|tube=mil
+stock|47.99|Luth-AR MBA-5 Collapsible Buttstock, Black|tube=mil
+stock|47.99|Magpul MOE TR Carbine Stock Mil-Spec, OD Green|tube=mil
+stock|53.99|B5 Systems Bravo-C Fixed Stock, OD Green|tube=mil
+stock|57.95|B5 Systems Sierra K Stock, Coyote Brown - SRK-1657|tube=mil
+stock|60|H&R Retro CAR15 Stock Tiger Stripe|tube=mil
+stock|66.99|Magpul DT Carbine Stock, Coyote Brown - MPIMAG1377MCB|tube=mil
+stock|95.99|B5 Systems Mil-Spec Enhanced SOPMOD Collapsible Stock, Flat Dark Earth|tube=mil
+stock|98.99|B5 Systems Folding Stock Black|tube=mil
+stock|117.99|Doublestar Corp. ARFX Skeleton Stock, Black|tube=mil
+stock|190.99|B5 Systems Modular Picatinny Stock (ODG) MPS-1556|tube=mil
+stock|225.99|B5 Systems Short Collapsible Precision Stock, Olive Drab|tube=mil
+muzzle|5.69|KAK Industry Flash Hider 1/2-28, Black|thread=1/2x28;type=Flash hider;cal=556
+muzzle|12.69|CMMG A2 Compensator Kit 1/2-28, Black|thread=1/2x28;type=Compensator;cal=556
+muzzle|27.99|KAK Industry Extended Flash Hider 1/2-28, Black|thread=1/2x28;type=Flash hider;cal=556
+muzzle|49.99|Strike Industries Venom AR-15 Flash Hider .223/5.56 1/2x28|thread=1/2x28;type=Flash hider;cal=556
+muzzle|67.99|Strike Industries Quad Compensator 1/2-28, Black - SI-MC-QUAD|thread=1/2x28;type=Compensator;cal=556
+muzzle|89.99|Bravo Company Mod 4 Compensator 1/2-28, Black|thread=1/2x28;type=Compensator;cal=556
+muzzle|93.99|Ultradyne USA 5.56MM/223REM MERCURY Brake Fits AR-15 Rifles w/ 1/2x28 Threads, Black Stainless Steel - UD10670|thread=1/2x28;type=Muzzle brake;cal=556
+muzzle|94.99|Gemtech Quickmounts Flash Hider, 5.56, 1/2-28 - 12145|thread=1/2x28;type=Flash hider;cal=556
+muzzle|124.99|Ultradyne USA 223/556 Apollo S Compensator Muzzle Brake w/ 1/2x28 Thread, Steel Nitride - UD10220|thread=1/2x28;type=Compensator;cal=556
+muzzle|152.99|SureFire Flash Hider/Suppressor Adapter SF3P-556-1/2-28|thread=1/2x28;type=Flash hider;cal=556;prong=1
+muzzle|14.99|PSA .30cal A2 Flash Hider 5/8-24 - 8844|thread=5/8x24;type=Flash hider;cal=300,65g
+muzzle|68.99|Dead Air KeyMicro Flash Hider 5/8-24, Black - DA116|thread=5/8x24;type=Flash hider;cal=300,65g
+muzzle|134.99|Ultradyne USA 6.5 Creedmoor Apollo S Compensator Muzzle Brake w/ 5/8x24 Thread, Steel Nitride - UD10250|thread=5/8x24;type=Compensator;cal=65g
+muzzle|140.99|Ultradyne USA 6.5 Creedmoor Pegasus Compensator Muzzle Brake w/ 5/8x24 Thread, Steel Nitride - UD10240|thread=5/8x24;type=Compensator;cal=65g
+muzzle|182.99|Ultradyne USA Apollo LR, Compensator, 30 Caliber, 5/8X24, Rated For .300 WIN Mag|thread=5/8x24;type=Compensator;cal=300,65g
+suppressor|634.99|CANiK Void-556K Stainless Steel DT Compact Suppressor, Black|cal=556;len=5.5
+suppressor|849.99|Dead Air CT5P 5.56/6mm ARC Suppressor Direct Thread 5/8-24, FDE - CT5PDTFDE5824|cal=556
+suppressor|854|Whisperstrike Match 556 HUB Suppressor w/ HUB Brake, Black|cal=556
+suppressor|1099|HUXWRX Flow 556k Suppressor + Flash Hider, Black - 2449|cal=556;len=5.6
+suppressor|799.99|Sabre Mixtape-300 300BLK Ti Suppressor, Black|cal=556,300
+suppressor|854|Whisperstrike Match 30 HUB Suppressor w/HUB Brake, FDE|cal=556,300,65g
+suppressor|950|Q LLC. Tall Boy .30 Cal Quickie Fast Attach Stainless Steel Silencer, Black|cal=556,300,65g;len=8
+suppressor|999.99|Dead Air Nomad TI OTB .300 RUM/7mm Backcountry Suppressor, Black - NOMADTIOTBBLK|cal=556,300,65g;len=8
+suppressor|1214.99|Surefire SOCOM300 SPS Gen2 Suppressor, Black|cal=556,300,65g
+suppressor|649.95|YHM 9mm Sidewinder M2 Pistol Suppressor|cal=9mm
+suppressor|712|Whisperstrike Slim 9mm Modular Suppressor, Black|cal=9mm
+suppressor|799|Q Erector 9mm Pistol Suppressor - Black|cal=9mm
+suppressor|1289|PTR Vent 2 9mm Titanium Pistol Suppressor|cal=9mm
+optic|54.99|Crimson Trace CTS-1528 Micro 6MOA Green - 1224264|shape=rd;mag=None (1x)
+optic|99.99|Burris Fastfire III with Picatinny Mount 3MOA 300234|shape=rd;incl=1;mag=None (1x)
+optic|149.99|Sig Sauer Romeo-MDC Open Reflex 1x26mm 6 MOA Red Dot Sight - SORMDC60|shape=rd;mag=None (1x)
+optic|195.49|Osight X 3MOA Dot + 32MOA Circle Red Dot Sight w/ Charging Cover, Black|shape=rd;incl=1;mag=None (1x)
+optic|269.99|Sig Sauer Romeo 5XDR Gen II Red Dot w/ Juliet 5 Micro Magnifier - SORJ5X201|shape=rd;incl=1;mag=None (1x)
+optic|499.99|Sig Sauer Electro-Optics ROMEO8T 1x38mm Red Dot Sight, Flat Dark Earth - SOR81003|shape=rd;incl=1;mag=None (1x)
+optic|539|EOTech Model 512 Holographic Sight - 512.A65|shape=holo;mag=None (1x)
+optic|645.99|EoTech XPS2-2 65 MOA Reticle Holographic Sight - XPS2-2|shape=holo;mag=None (1x)
+optic|655.99|EOTech XPS2-300 Holographic Sight 300 Blackout - XPS2-300|shape=holo;mag=None (1x)
+optic|755.99|EOTech XPS3-0 Holographic Sight|shape=holo;mag=None (1x)
+optic|815|EOTech EXPS3-0 Holographic Sight|shape=holo;mag=None (1x)
+optic|1355.99|Eotech 3x30.5mm x 21.6mm Holographic Hybrid Green Dot Sight - HHSGRN|shape=holo;mag=None (1x)
+optic|139.99|Swampfox Raider 1x20 Micro Prism Sight w/ Green IR 6MOA - RMPS120-G6|shape=prism;mag=1x
+optic|149.99|Swampfox Blade 1x25 Prism Sight, Red BRC - BPS00125-R|shape=prism;mag=1x
+optic|213.99|Truglo PR1 Prism, Red Dot, 1X25, 6 MOA Red Dot with Outer Ring, Black|shape=prism;mag=1x
+optic|149.99|Swampfox Tomahawk 1-4x24 SFP LPVO, Red MOA - ATK14241-M|shape=lpvo;mag=1-4x
+optic|219.99|Vortex Strike Eagle 1-6x24 Gen 2 Riflescope with AR-BDC3 Reticle & Vortex Sport Cantilever 30mm Ring Mount|shape=lpvo;mag=1-6x;incl=1
+optic|254.99|Bushnell AR Optics 1-4x24mm Illuminated BTR-1 (FFP) Rifle Scope - AR71424I|shape=lpvo;mag=1-4x
+optic|349.99|Swampfox Optics Arrowhead Rifle Scope 1-8x24mm|shape=lpvo;mag=1-8x
+optic|441.98|Burris RT-6 1-6x24mm Rifle Scope & Burris AR-P.E.P.R. 30mm Scope Mount|shape=lpvo;mag=1-6x;incl=1
+optic|607.99|Trijicon Ascent Rifle Scope 1-6x24mm|shape=lpvo;mag=1-6x
+optic|1800.99|Leupold Patrol 6HD Gen 2 1-6x24 (30mm) SFP CDS-ZL2 Illum. CMR2 - 185607|shape=lpvo;mag=1-6x;tube=30mm
+optic|3999.99|Vortex AMG 1-10x24 FFP EBR-9 MRAD Reticle - AMG-11002|shape=lpvo;mag=1-10x
+optic|49.99|Simmons Pro Target Rifle Scope 3-9x40mm - SIM3940C|shape=scope;mag=3-9x;tube=1in
+optic|97.99|SIG Sauer Buckmaster Riflescope 3-9x50mm BDC Reticle, Black - SOBM33002|shape=scope;mag=3-9x
+optic|365.99|Swampfox Patriot Precision Rifle Scope 6-24x50mm|shape=scope;mag=6-24x
+optic|450.99|Leupold VX-Freedom Rifle Scope 3-9x40mm|shape=scope;mag=3-9x;tube=1in
+optic|899.99|Leupold VX-3HD 3.5-10x50mm Illuminated FireDot Twilight Hunter Rifle Scope - 180628|shape=scope;mag=3.5-10x
+optic|1399.99|Steiner H6Xi Rifle Scope 2-12x42mm - 8780|shape=scope;mag=2-12x;tube=30mm
+optic|2499.99|EOTech Vudu 5-25x50 FFP Riflescope H59 Reticle - VDU5-25FFH59|shape=scope;mag=5-25x;tube=34mm
+mount|289.99|Leupold Mark IMS Mount 34mm 1.50" Mil-Std 1913 Picatinny Rail|for=lpvo,scope;kind=cant;tube=34mm
+mount|14.59|Weaver Quad Lock 1" High Rings, Silver 49056|for=lpvo,scope;kind=rings;tube=1in
+mount|40.99|Leupold Rifleman Gen2 30mm Rings Med - 185532|for=lpvo,scope;kind=rings;tube=30mm
+mount|84.99|Maxima Fixed Ring 34mm Tube High Steel Picatinny/Weaver|for=lpvo,scope;kind=rings;tube=34mm
+mount|199.99|Steiner T Series Scope Ring 34mm Tube 0.88" - Picatinny Rail Scope Ring - 5964|for=lpvo,scope;kind=rings;tube=34mm
+magnifier|100.99|Leapers UTG 3x25mm Magnifier w/ Flip-to-Side QD Mount - SCP-MF3WEQS|power=3
+magnifier|159.99|Holosun Optic HM3X Magnifier Brown - HM3X-BRN|power=3
+magnifier|277.99|Riton 3 Tactix Magnifier 3x22mm|power=3
+magnifier|400.99|Sig Sauer Juliet3T-AMR Magnifier - 3x22mm - SOJMT01|power=3
+magnifier|555.99|EOTech G43 Magnifier, 3X, Compact, No Mount, Matte Finish, Tan|power=3
+magnifier|599.99|EOTech G45 Magnifier, 5X, No Mount, Matte Finish, Black - G45NM|power=5
+magnifier|714.99|Meprolight MMX4 Magnifier 4x24mm|power=4
+magnifier|1443.99|Aimpoint 6XMag-1 Magnifier AR Ready w/ 39mm Spacer & Twist Mount - 200340|power=6
+fsight|27.99|NcStar Sight Front Flip-Up|shape=flip
+fsight|37.99|Magpul Industries MBUS Back-Up Front Sight, OD Green - MAG1166-ODG|shape=flip
+rsight|33.29|Ruger Rapid Deploy Rear Sight, Back up Sight, Fits Picatinny, Black Polymer|shape=flip
+rsight|33.99|NcStar AR-15 Detachable Rear Sight - MARDRS|shape=flip
+rsight|34.99|Leapers, Inc. - UTG Accu-Sync Spring-loaded AR15 Flip-up Rear Sight, Black|shape=flip
+rsight|80.99|Samson A2 Manual Folding Sight Rear, Black|shape=flip
+foregrip|14.99|Leapers, Inc. - UTG Ultra Slim Angled Foregrip, Keymod, Black|shape=ang
+foregrip|17.99|Strike Industries M-LOK Angled Long Vertical Grip w/Cable Management, Black|shape=ang
+foregrip|20.99|Slate Black Industries Slate Stop M-LOK, Black|shape=stop
+foregrip|22.99|Slate Black Industries SVG Vertical Grip, MLOK, Black|shape=vert
+foregrip|25.99|Strike Industries Link Cobra M-LOK Fore Grip, Flat Dark Earth - SI-AR-CMS-CFG-FDE|shape=vert
+foregrip|38.99|Daniel Defense Mil-Spec Picatinny Vertical Foregrip, Flat Dark Earth|shape=vert
+foregrip|57.99|FAB Defense PTK-M M-LOK Compatible Ergonomic Pointing Grip Combo Pack, Black - FXPTKMCB|shape=vert
+foregrip|65.99|Samson Manufacturing Standard Style Long Vertical Foregrip, Black - 04-01009-01|shape=vert
+foregrip|85.99|A3 Industries 2.75" Grooved Modular Vertical Foregrip w/Integrated Hand Stop, Black|shape=stop
+foregrip|100.99|MDT Elite Vertical Grip, Black|shape=vert
+light|95.99|UTG Light and Green Laser Combo 400 lm|lm=400
+light|109.99|Viridian C5L Slim Tactical Light 550 lm|lm=550
+light|120.99|Inforce WML White - Gen 3 Weapon Mounted Light - 450 lm - IF71011|lm=450
+light|150.99|Inforce WMLx White - Gen 3 Weapon Mounted Light - 1100 lm - IF71012DE|lm=1100
+light|180.99|Inforce WMLx White/IR - Gen 3 Weapon Mounted Light - 900 lm - IF71014|lm=900
+light|198.99|Viridian C5L Micro Tactical Light and Green Laser Combo 550 lm|lm=550
+laser|109.99|UTG Compact Green Laser|beam=Visible
+laser|349.99|Holosun LE117-IR Infrared Collimated Laser Pointer, Titanium|beam=Infrared
+laser|795.99|AGM Global Vision Weapon Laser Aiming Device, Tan|beam=Visible
+laser|2000.99|Eotech On-Gun-Laser - Green Vis - Modlite Remote Switch, Tan - EOT-OGL-C-T|beam=Visible
+switch|36.79|Streamlight Plug-in Long Gun Remote Pressure Switch for TLR-1, TLR-2 Series Weapon Light - 69135|needs=light
+switch|60.19|Streamlight TLR-Dual Remote Switch - 69138|needs=both
+switch|86.99|Surefire Weapon Light Switch Polymer 9" - Tactical - CSP-09|needs=light
+switch|107.99|Surefire Remote Switch Assembly Fits SureFire Scout Light|needs=light
+bcg|152.99|Faxon 9mm Bolt Carrier Group, Glock & Colt Compatible Nitride - FF9MMBCGCNITRIDE|cal=9mm;coat=Nitride
+bcg|149.99|PSA Gen4 9mm BCG - Nitride - 5165449845|cal=9mm;coat=Nitride
+bcg|158.99|FailZero AR9, 9mm BCG, Black Nitride|cal=9mm;coat=Nitride
+bcg|191.99|Stern Defense Nickel Boron 9mm Complete Bolt Carrier Group - SD BU9 NiB ECHO|cal=9mm;coat=Nickel boron
+buffer|9.29|Tacfire 9mm Heavy Buffer, Black - MAR04455|cal=9mm
+buffer|143.99|Angstadt Arms Hydraulic Buffer Kit, Stainless Steel - AA09HBKHDP|cal=9mm
+mag|17.99|ASC 6.5 Grendel 10rd Stainless Steel Magazine, Black Marlube|cal=65g;cap=10;mat=Stainless steel
+mag|19.99|ASC 6.5 Grendel 25rd Stainless Steel Magazine, Black Marlube|cal=65g;cap=25;mat=Stainless steel
+mag|24.19|C Products Defense 6.5 Grendel 26rd Stainless Steel Magazine|cal=65g;cap=26;mat=Stainless steel
+mag|23.99|D&H 6.5 Grendel 10 Round Steel Magazine - DHT-12038|cal=65g;cap=10;mat=Steel
+tguard|4.49|TacFire Trigger Guard w/Pin 2.38", Black|
+tguard|8.99|Sons of Liberty Gun Works Trigger Guard Assembly, Black|
+tguard|6.99|Bravo Company Mod 0 Trigger Guard, FDE - BCM-GTG-MOD-0-FDE|big=1
+tguard|7.99|B5 Systems Trigger Guard, OD Green|big=1
+tguard|23.99|Forward Controls Design TGF Trigger Guard Enlarged Opening, Black|big=1
+tguard|29.99|Spike's Tactical Billet Trigger Guard Gen II, Black - SLA0102|big=1
+tguard|42.99|Geissele Ultra Precision 5-Axis Trigger Guard, Desert Dirt|big=1
+handguard|28.29|Tacfire ACE M-LOK Handguard 4" for AR-15, Black - HG20-4|len=4;mount=M-LOK
+handguard|35.69|Tacfire 7" ACE M-LOK Handguard for AR-15, Black - HG20-7|len=7;mount=M-LOK
+handguard|122.99|Yankee Hill Machine Co MR7 M-LOK AR-15 Handguard 7.3" Carbine Length - YHM-5330|len=7.3;mount=M-LOK
+handguard|176.99|Midwest Industries Gen 4 M-Series AR-15 10.5" M-LOK Handguard - MIG4M105|len=10.5;mount=M-LOK
+handguard|174.99|Strike Industries Strike Rail 13.5" M-LOK Handguard, Black - SI-StrikeRail-135-BK|len=13.5;mount=M-LOK
+handguard|209.99|Midwest Industries Gen 4 M-Series AR-15 15" M-LOK Handguard - MIG4M15|len=15;mount=M-LOK

@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "scale_px_per_in": 38,
+  "view": "right-side, muzzle right",
+  "notes": "One entry per catalog part. The site loads only the parts in the current build. Images live in parts/img/<slot>/<id>.webp. Coordinates are in the part image's own pixels; the renderer converts them using inches.",
+  "schema": {
+    "id": "catalog id / PSA slug",
+    "slot": "upper | lower | barrel | handguard | muzzle | stock | grip | mag | optic | trigger | magrel | ...",
+    "img": "parts/img/<slot>/<id>.webp (null = drawn procedurally, e.g. barrel, charging handle)",
+    "size_in": "[length, height] the image represents, in inches",
+    "anchors": "named points in image px, e.g. lower: {pinRear:[x,y], pinFront:[x,y], magwellFront:[x,y], magwellRear:[x,y], earFront:[x,y], earRear:[x,y], bodyTop:y, holes:[...]}",
+    "source": { "url": "PSA photo used", "gallery_index": 0, "flipped": false, "rotated_deg": 0 },
+    "checks": "results of orientation / size / anchor checks from the pipeline",
+    "color_variants": "optional: other catalog ids that reuse this cut-out with a tint"
+  },
+  "parts": {}
+}
