@@ -1,6 +1,6 @@
-# IronBench 3D
+# IronBench
 
-A Tarkov-workbench-style firearm builder. The AR-15 platform is live; AK and Glock are planned. It uses the real Palmetto State Armory catalog: 307 parts with prices, weights, reviews and compatibility filtering.
+A Tarkov-workbench-style firearm builder with a live 2D build preview made from real product photos. The AR-15 platform is live; AK and Glock are planned. It uses the real Palmetto State Armory catalog: 307 parts with prices, weights, reviews and compatibility filtering.
 
 - `index.html`: the builder site, served by GitHub Pages.
 - `data/`: catalog extracts from PSA (parts, links, reviews, images, barrel thread specs).

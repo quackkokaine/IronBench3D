@@ -1,4 +1,4 @@
-# IronBench 2D Build Preview — Assembly Spec (AR-15, v7)
+# IronBench Build Preview — Assembly Spec (AR-15, v7)
 
 View: RIGHT side of the rifle, muzzle pointing RIGHT. Scale S = 38 px per real inch. Canvas 1600x600.
 Code: /home/claude/ib2d.js (library + per-part META + orientation checks) and /home/claude/compose5.js (assembly). Inject ib2d.js, then compose5.js, then patch6.js into a palmettostatearmory.com tab, then `await IB.build()`.
@@ -163,3 +163,11 @@ Rules now:
   - gas tube: Ø0.18", 0.58" above the bore, from the receiver to the gas block
   - low-profile gas block: at face + gas length − 0.25", always drawn
 - Check other long parts (uppers, barrels, stocks) for the same `trim()` line-deletion bug when they are re-processed.
+
+## 13. Layer-order rule (locked)
+The handguard is always drawn over the barrel, barrel nut, gas tube, gas block, threads and any part of a muzzle device it overlaps.
+- Anything that physically sits inside the handguard is drawn before it, so it is visible only through the slots.
+- When new part types are added (gas blocks with photos, suppressors, lights, foregrips):
+  - parts inside the rail go before the handguard
+  - rail-mounted accessories (lights, foregrips, lasers, front sight) go after it
+- The order is written at the top of `compose()` in `render/site2d.js`.

@@ -139,7 +139,7 @@ window.__compose5=(P,o={})=>{
  if(o.debug){x.font='11px monospace';const mk=(X,Y,t,c='#e00')=>{x.fillStyle=c;x.fillRect(X-3,Y-3,6,6);x.fillText(t,X+5,Y-4);};
   mk(towerFrontX,lowerTopY,'tower');mk(faceX,boreY,'face/bore');mk(magFront,lowerTopY,'mwF');mk(magRear,lowerTopY,'mwR');mk(earFX,earFY,'earF');mk(earRX,earRY,'earR');mk(lpx(uC),slotY,'slot');
   HL.forEach((h,i)=>mk(h.x,h.y,'h'+i,'#06c'));mk(muzzleX,boreY,'muzzle');}
- x.fillStyle='#1b1c1e';x.font='600 22px Arial';x.fillText('IRONBENCH 3D  ·  BUILD PREVIEW',34,44);x.fillStyle='#f15a0a';x.fillRect(34,55,66,4);
+ x.fillStyle='#1b1c1e';x.font='600 22px Arial';x.fillText('IRONBENCH  ·  BUILD PREVIEW',34,44);x.fillStyle='#f15a0a';x.fillRect(34,55,66,4);
  x.fillStyle='#55585c';x.font='14px Arial';x.fillText(o.cap1||'',34,82);x.fillText(o.cap2||'',34,102);
  return {pinMode,mateResid:+mateResid.toFixed(1),upperLenIn:+(dU.w/S).toFixed(2),lowPins:lowPins.length,upLugs:UL.runs.length,upPinSrc:[UL.rear&&UL.rear.src,UL.front&&UL.front.src],towerFrontX:Math.round(towerFrontX),uX:Math.round(uX),faceX:Math.round(faceX),boreY:Math.round(boreY),railTopY:Math.round(railTopY),muzzleX:Math.round(muzzleX),stockBack:Math.round(towerRear-IN(1.25)-dSt.w),holes:HL.length,earF:[Math.round(earFX),Math.round(earFY)],earR:[Math.round(earRX),Math.round(earRY)]};
 };

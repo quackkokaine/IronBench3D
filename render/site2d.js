@@ -125,6 +125,13 @@
   }
 
   // ---------------- assembly (from compose7, the version that produced preview v8) ----------------
+  // LAYER ORDER (back to front) - do not reorder when adding catalog parts:
+  //   buffer tube -> stock -> castle nut -> magazine -> grip
+  //   -> barrel nut, barrel, gas tube, gas block, threads -> muzzle device
+  //   -> charging handle -> upper -> dust cover / forward assist
+  //   -> HANDGUARD (always over the barrel, gas system and muzzle area it overlaps)
+  //   -> optic -> trigger (behind the lower) -> lower -> trigger guard, pins, selector, mag release
+  // Anything that lives inside the handguard must be drawn before it, so it shows only through the slots.
   function compose(P, o) {
     const Lc = document.createElement('canvas'); Lc.width = CW; Lc.height = CH; const L = Lc.getContext('2d');
     const boxes = {};
