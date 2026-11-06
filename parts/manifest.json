@@ -1,17 +1,369 @@
 {
-  "version": 1,
-  "scale_px_per_in": 38,
-  "view": "right-side, muzzle right",
-  "notes": "One entry per catalog part. The site loads only the parts in the current build. Images live in parts/img/<slot>/<id>.webp. Coordinates are in the part image's own pixels; the renderer converts them using inches.",
-  "schema": {
-    "id": "catalog id / PSA slug",
-    "slot": "upper | lower | barrel | handguard | muzzle | stock | grip | mag | optic | trigger | magrel | ...",
-    "img": "parts/img/<slot>/<id>.webp (null = drawn procedurally, e.g. barrel, charging handle)",
-    "size_in": "[length, height] the image represents, in inches",
-    "anchors": "named points in image px, e.g. lower: {pinRear:[x,y], pinFront:[x,y], magwellFront:[x,y], magwellRear:[x,y], earFront:[x,y], earRear:[x,y], bodyTop:y, holes:[...]}",
-    "source": { "url": "PSA photo used", "gallery_index": 0, "flipped": false, "rotated_deg": 0 },
-    "checks": "results of orientation / size / anchor checks from the pipeline",
-    "color_variants": "optional: other catalog ids that reuse this cut-out with a tint"
+ "version": 1,
+ "scale_px_per_in": 38,
+ "view": "right-side, muzzle right",
+ "notes": "One entry per catalog part. The site loads only the parts in the current build. Images live in parts/img/<slot>/<id>.webp. Coordinates are in the part image's own pixels; the renderer converts them using inches.",
+ "schema": {
+  "id": "catalog id / PSA slug",
+  "slot": "upper | lower | barrel | handguard | muzzle | stock | grip | mag | optic | trigger | magrel | ...",
+  "img": "parts/img/<slot>/<id>.webp (null = drawn procedurally, e.g. barrel, charging handle)",
+  "size_in": "[length, height] the image represents, in inches",
+  "anchors": "named points in image px, e.g. lower: {pinRear:[x,y], pinFront:[x,y], magwellFront:[x,y], magwellRear:[x,y], earFront:[x,y], earRear:[x,y], bodyTop:y, holes:[...]}",
+  "source": {
+   "url": "PSA photo used",
+   "gallery_index": 0,
+   "flipped": false,
+   "rotated_deg": 0
   },
-  "parts": {}
+  "checks": "results of orientation / size / anchor checks from the pipeline",
+  "color_variants": "optional: other catalog ids that reuse this cut-out with a tint"
+ },
+ "parts": {
+  "yankee-hill-machine-223-rem-5-56-flat-top-stripped-upper-receiver-hardcoat-anodized-matte-black-110": {
+   "id": "yankee-hill-machine-223-rem-5-56-flat-top-stripped-upper-receiver-hardcoat-anodized-matte-black-110",
+   "slot": "upper",
+   "img": "parts/img/upper/yankee-hill-machine-223-rem-5-56-flat-top-stripped-upper-receiver-hardcoat-anodized-matte-black-110.webp",
+   "px": [
+    537,
+    167
+   ],
+   "size_in": [
+    7.51,
+    null
+   ],
+   "anchors": {
+    "mateRow": 137,
+    "railRow": 10,
+    "faceCol": 504,
+    "lugRear": {
+     "x": 47.895705521472394,
+     "y": 149.34969325153375,
+     "src": "hole"
+    },
+    "lugFront": {
+     "x": 489.2229299363057,
+     "y": 147.59872611464968,
+     "src": "hole"
+    },
+    "feat": {
+     "port": [
+      0.47,
+      0.785,
+      0.33,
+      0.63
+     ],
+     "fa": [
+      0.39,
+      0.53
+     ]
+    },
+    "bodyLen_in": 7.05
+   },
+   "source": {
+    "url": "https://palmettostatearmory.com/media/catalog/product/cache/7af8331bf1196ca28793bd1e8f6ecc7b/7/9/790803-Yankee_Hill_Machine_.223_Rem_5.56_Flat_Top_Stripped_Upper_Receiver_Hardcoat_Anodized_Matte_Black_110_1.jpg",
+    "gallery_index": 1,
+    "flipped": false
+   },
+   "bytes": 10026
+  },
+  "ruger-ar-556-stripped-lower-receiver-black": {
+   "id": "ruger-ar-556-stripped-lower-receiver-black",
+   "slot": "lower",
+   "img": "parts/img/lower/ruger-ar-556-stripped-lower-receiver-black.webp",
+   "px": [
+    506,
+    256
+   ],
+   "size_in": [
+    7.56,
+    null
+   ],
+   "anchors": {
+    "bodyTop": 84,
+    "pinRear": [
+     75.54597701149426,
+     102.25862068965517
+    ],
+    "pinFront": [
+     488.59493670886076,
+     101.81012658227849
+    ],
+    "holes": [
+     [
+      42.6,
+      63.2,
+      38
+     ],
+     [
+      75.5,
+      102.3,
+      8
+     ],
+     [
+      488.6,
+      101.8,
+      6.5
+     ],
+     [
+      275.4,
+      104.8,
+      6
+     ],
+     [
+      314,
+      142.8,
+      29
+     ],
+     [
+      127.8,
+      131.9,
+      12.5
+     ],
+     [
+      255.3,
+      126.1,
+      4
+     ],
+     [
+      287.3,
+      136.2,
+      7
+     ],
+     [
+      200.8,
+      146.3,
+      4.5
+     ],
+     [
+      276.2,
+      172.9,
+      4
+     ]
+    ],
+    "holesFilled": true
+   },
+   "source": {
+    "url": "https://palmettostatearmory.com/media/catalog/product/cache/7af8331bf1196ca28793bd1e8f6ecc7b/5/1/51655240573-1.png",
+    "gallery_index": 1,
+    "flipped": false
+   },
+   "bytes": 12310
+  },
+  "sabre-15-15-qdsm-rail-black": {
+   "id": "sabre-15-15-qdsm-rail-black",
+   "slot": "handguard",
+   "img": "parts/img/handguard/sabre-15-15-qdsm-rail-black.webp",
+   "px": [
+    482,
+    73
+   ],
+   "size_in": [
+    15,
+    null
+   ],
+   "anchors": {
+    "railTopRow": 1,
+    "darkSlots": true
+   },
+   "source": {
+    "url": "https://palmettostatearmory.com/media/catalog/product/cache/7af8331bf1196ca28793bd1e8f6ecc7b/5/1/51655236895_3526_1.jpg",
+    "gallery_index": 0,
+    "flipped": false
+   },
+   "bytes": 9458
+  },
+  "sabre-15-9-75-qdsm-rail-blue-titanium": {
+   "id": "sabre-15-9-75-qdsm-rail-blue-titanium",
+   "slot": "handguard",
+   "img": "parts/img/handguard/sabre-15-9-75-qdsm-rail-blue-titanium.webp",
+   "px": [
+    499,
+    117
+   ],
+   "size_in": [
+    9.75,
+    null
+   ],
+   "anchors": {
+    "railTopRow": 4
+   },
+   "source": {
+    "url": "https://palmettostatearmory.com/media/catalog/product/cache/7af8331bf1196ca28793bd1e8f6ecc7b/5/1/51655236888_41526_1.jpg",
+    "gallery_index": 0,
+    "flipped": false
+   },
+   "bytes": 12204
+  },
+  "kak-industry-flash-hider-1-2-28-black": {
+   "id": "kak-industry-flash-hider-1-2-28-black",
+   "slot": "muzzle",
+   "img": "parts/img/muzzle/kak-industry-flash-hider-1-2-28-black.webp",
+   "px": [
+    414,
+    193
+   ],
+   "size_in": [
+    2.05,
+    0.85
+   ],
+   "anchors": {
+    "rearFace": "left edge seats on thread shoulder",
+    "thread": "1/2x28"
+   },
+   "source": {
+    "url": "https://palmettostatearmory.com/media/catalog/product/cache/7af8331bf1196ca28793bd1e8f6ecc7b/K/A/KAKA2-BIRDCAGE_1.jpg",
+    "gallery_index": 0,
+    "flipped": true
+   },
+   "bytes": 16274
+  },
+  "psa-classic-m4-stock-odg": {
+   "id": "psa-classic-m4-stock-odg",
+   "slot": "stock",
+   "img": "parts/img/stock/psa-classic-m4-stock-odg.webp",
+   "px": [
+    313,
+    249
+   ],
+   "size_in": [
+    7,
+    null
+   ],
+   "anchors": {
+    "tubeTopOffset_in": -0.08,
+    "gapBehindTower_in": 1.25
+   },
+   "source": {
+    "url": "https://palmettostatearmory.com/media/catalog/product/cache/7af8331bf1196ca28793bd1e8f6ecc7b/a/d/ad49317b-a2be-4d23-be36-62232d7b29fc.jpg",
+    "gallery_index": 0,
+    "flipped": false
+   },
+   "bytes": 12270
+  },
+  "luth-ar-a2-pistol-grip-black": {
+   "id": "luth-ar-a2-pistol-grip-black",
+   "slot": "grip",
+   "img": "parts/img/grip/luth-ar-a2-pistol-grip-black.webp",
+   "px": [
+    219,
+    417
+   ],
+   "size_in": [
+    null,
+    4.4
+   ],
+   "anchors": {
+    "rightEdgeAheadOfRearEar_in": 0.15,
+    "topAboveGripLevel_in": 0.32
+   },
+   "source": {
+    "url": "https://palmettostatearmory.com/media/catalog/product/cache/7af8331bf1196ca28793bd1e8f6ecc7b/1/0/100028040_1.jpg",
+    "gallery_index": 0,
+    "flipped": true
+   },
+   "bytes": 18746
+  },
+  "img-ar-15-30rd-magazine-223-5-56-ar-0009": {
+   "id": "img-ar-15-30rd-magazine-223-5-56-ar-0009",
+   "slot": "mag",
+   "img": "parts/img/mag/img-ar-15-30rd-magazine-223-5-56-ar-0009.webp",
+   "px": [
+    226,
+    492
+   ],
+   "size_in": [
+    null,
+    7.4
+   ],
+   "anchors": {
+    "topFrontRule": "top-front corner (top 10% rows) 0.07in inside magwell front",
+    "orient": "vertical in well, curves forward"
+   },
+   "source": {
+    "url": "https://palmettostatearmory.com/media/catalog/product/cache/7af8331bf1196ca28793bd1e8f6ecc7b/5/1/51655233704_021826_4.jpg",
+    "gallery_index": 3,
+    "flipped": false
+   },
+   "bytes": 14374
+  },
+  "eotech-512-a65-black-holographic-weapon-sight": {
+   "id": "eotech-512-a65-black-holographic-weapon-sight",
+   "slot": "optic",
+   "img": "parts/img/optic/eotech-512-a65-black-holographic-weapon-sight.webp",
+   "px": [
+    518,
+    237
+   ],
+   "size_in": [
+    5.6,
+    null
+   ],
+   "anchors": {
+    "baseBelowRailTop_in": 0.24,
+    "rearFromUpperRear_in": 1.25
+   },
+   "source": {
+    "url": "https://palmettostatearmory.com/media/catalog/product/cache/7af8331bf1196ca28793bd1e8f6ecc7b/6/9/6986_101724_4.jpg",
+    "gallery_index": 4,
+    "flipped": false
+   },
+   "bytes": 15656
+  },
+  "psa-custom-ar-3-5-lbs-match-grade-drop-in-trigger-flat-116055": {
+   "id": "psa-custom-ar-3-5-lbs-match-grade-drop-in-trigger-flat-116055",
+   "slot": "trigger",
+   "img": "parts/img/trigger/psa-custom-ar-3-5-lbs-match-grade-drop-in-trigger-flat-116055.webp",
+   "px": [
+    356,
+    402
+   ],
+   "size_in": [
+    null,
+    null
+   ],
+   "anchors": {
+    "pins": {
+     "trig": [
+      0.52,
+      0.46
+     ],
+     "ham": [
+      0.89,
+      0.34
+     ]
+    },
+    "fit": "2-point: trig/ham pin holes onto lower fcp holes; drawn behind lower"
+   },
+   "source": {
+    "url": "https://palmettostatearmory.com/media/catalog/product/cache/7af8331bf1196ca28793bd1e8f6ecc7b/1/1/116055.jpg",
+    "gallery_index": 0,
+    "flipped": true
+   },
+   "bytes": 14354
+  },
+  "lead-star-arms-ravage-magazine-release-button-black": {
+   "id": "lead-star-arms-ravage-magazine-release-button-black",
+   "slot": "magrel",
+   "img": "parts/img/magrel/lead-star-arms-ravage-magazine-release-button-black.webp",
+   "px": [
+    304,
+    353
+   ],
+   "size_in": [
+    null,
+    0.5
+   ],
+   "anchors": {
+    "center": "mag-catch hole",
+    "blend": "multiply over dark disc"
+   },
+   "source": {
+    "url": "https://palmettostatearmory.com/media/catalog/product/cache/7af8331bf1196ca28793bd1e8f6ecc7b/L/S/LSA-D25EPL85-Lead-Star-Magazine-Release-Button-Black.jpg",
+    "gallery_index": 0,
+    "flipped": false
+   },
+   "bytes": 7700
+  }
+ },
+ "generated": "2026-11-06T23:02:12.931Z"
 }
