@@ -53,7 +53,7 @@
         catch (err) { delete cache[e.id]; rej(err); }
       };
       img.onerror = () => { delete cache[e.id]; rej(new Error('layer failed: ' + e.img)); };
-      img.src = e.img;
+      img.src = e.img + '?v=' + (e.bytes || '') + (e.px ? '-' + e.px.join('x') : '');   // cache-bust when a layer is re-exported
     }));
   }
   IB2D.clearCache = () => { for (const k in cache) delete cache[k]; };
