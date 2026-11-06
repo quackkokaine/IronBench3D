@@ -115,6 +115,9 @@ input[type=text]{background:var(--cell);border:1px solid var(--line-2);padding:7
 .viewport{position:relative;height:clamp(280px,46vh,520px);border:1px solid var(--line);overflow:hidden;
   background:radial-gradient(ellipse at 50% 40%,#232622 0%,#121412 62%,#0b0c0b 100%)}
 .viewport canvas{display:block;width:100%;height:100%;touch-action:none}
+.viewport.v2d{background:linear-gradient(180deg,#f2f2ef 0%,#dededa 75%,#cfcfca 100%)}
+.viewport.v2d #pv2d{object-fit:contain;touch-action:auto}
+.viewport.v2d .hud{color:#3a3c40}.viewport.v2d .hud.tl strong{color:#17181a}
 .hud{position:absolute;pointer-events:none;font-family:var(--f-mono);font-size:11px;color:var(--muted);letter-spacing:.04em}
 .hud.tl{top:10px;left:12px;display:grid;gap:2px}
 .hud.tl strong{font-family:var(--f-display);font-size:20px;color:var(--fg);letter-spacing:.06em;font-weight:600;text-transform:uppercase}
@@ -484,6 +487,7 @@ body.dopen .bubble::after{right:auto;left:19px}
 
 <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+<script src="render/site2d.js"></script>
 <script>
 (function(){
 "use strict";
@@ -1960,6 +1964,7 @@ function renderLoop(){cancelAnimationFrame(rafId);if(!renderer||vp.classList.con
     if(camAnim){camAnim.t=Math.min(1,camAnim.t+.06);const e=1-Math.pow(1-camAnim.t,3);camera.position.lerpVectors(camAnim.p0,camAnim.p1,e);controls.target.lerpVectors(camAnim.t0,camAnim.t1,e);if(camAnim.t>=1)camAnim=null;}
     controls.update();renderer.render(scene,camera);}
 function refreshModel(){
+  if(window.IB2D&&IB2D.on){IB2D.clearCache();update(true);toast("Preview reloaded.");return;}
   const b=$("refreshModel");b.disabled=true;b.textContent="Reloading…";
   try{
     cancelAnimationFrame(rafId);
@@ -2035,6 +2040,7 @@ function thumbHTML(p,cls,link){
   return `<span class="${cls} ${ph?"ph":""}">${inner}</span>`;
 }
 function rebuild(refit){
+  if(window.IB2D&&IB2D.on){IB2D.render(get).then(r=>{if(r){oal=r.oalIn;renderStats();}}).catch(e=>console.warn("2D preview:",e));return;}
   if(!scene){oal=0;return;}
   if(gun){scene.remove(gun);dispose(gun);}
   gun=new THREE.Group();slotGroups={};
@@ -2278,14 +2284,17 @@ document.querySelector(".platforms").addEventListener("click",e=>{
 function route(){
   const ar=location.hash==="#ar";
   $("landingView").hidden=ar;$("builderView").hidden=!ar;
-  if(ar){if(!renderer){initThree();}resize();update(true);}
+  if(ar){if(!(window.IB2D&&IB2D.on)&&!renderer){initThree();}resize();update(true);}
   else if(openSlot)closePicker();
   window.scrollTo(0,0);
 }
 window.addEventListener("hashchange",route);
 for(const k in state.build)if(state.build[k]&&!BY[state.build[k]])delete state.build[k];
 if(!Object.values(state.build).some(Boolean))freshBuild();
-resolve();update(false);route();
+resolve();update(false);
+(window.IB2D?IB2D.init():Promise.resolve(false)).catch(()=>false).then(ok=>{
+  if(ok)IB2D.mount(vp,{pick:s=>{if(SLOT[s])openPicker(s);},label:s=>SLOT[s]?SLOT[s].label+(get(s)?": "+get(s).name:""):null,slotLabel:s=>SLOT[s]?SLOT[s].label.toLowerCase():s});
+  route();});
 })();
 </script>
 
