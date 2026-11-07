@@ -458,11 +458,11 @@
     589
    ],
    "size_in": [
-    6.9,
+    6.2,
     null
    ],
    "anchors": {
-    "tubeY": 0.2167,
+    "tubeY": 0.2336,
     "frontX": 1,
     "gap_in": 1.25
    },

@@ -186,11 +186,11 @@ Every stock entry now carries its own real length and tube anchor instead of the
 | Stock | Length | Source of length | Photo |
 |---|---|---|---|
 | PSA Classic M4 ODG | 7.0 | M4 standard | [0] side |
-| Magpul MOE TR ODG | 7.0 | PSA spec | [0] 3/4, black photo recoloured to ODG sampled from the B5 Bravo-C |
+| Magpul MOE TR ODG | 7.0 × 5.3 | PSA spec; height from Magpul's MOE SL | [0] 3/4, black photo recoloured to ODG sampled from the B5 Bravo-C; levelled, front face removed |
 | B5 Bravo-C ODG | 8.74 | b5systems.com | [0] side |
 | B5 Sierra K Coyote | 5.63 | b5systems.com | [0] side |
-| H&R Retro CAR15 | 6.9 | estimate | [0] side |
-| Magpul DT Coyote | 7.0 × 5.3 | magpul.com | [0] 3/4 |
+| H&R Retro CAR15 | 6.2 | B5 CAR-15 spec (assumed the same stock) | [0] side |
+| Magpul DT Coyote | 7.0 × 5.3 | magpul.com | [0] 3/4; levelled, front face removed |
 | B5 Enhanced SOPMOD FDE | 7.40 | distributor spec | [0] side |
 | B5 "Folding Stock" (AKM-1485) | 9.0 | distributor spec | [0] side |
 | B5 MPS ODG | 8.06 | distributor spec | [0] side (small source photo) |
@@ -200,3 +200,7 @@ Every stock entry now carries its own real length and tube anchor instead of the
 | Doublestar ARFX | 11.24 | from photo scale, 4.6" plate | **assembled**: frame + foam cut from the exploded photo, pad redrawn |
 
 Recreations live in `render/recreate-stocks.js` (100 px/in, black polymer sampled from the photos).
+
+**3/4-view photos (MOE TR, DT).** Rotated so the top runs parallel to the tube (line fit through the top edge, 12–80 % of the length), the visible front face (tube opening + rim) cut away, then squared to the maker's length × height, which undoes the foreshortening. Tube anchor = top of the tube opening + 0.575". Magpul's own product photos were checked for a true side view; they are the same 3/4 angles.
+
+**Review pass (v10.1).** ARFX pad now follows the tilted rear plate instead of leaving a gap; MBA-5 and RECC-E drawings got edge lighting and filleted window corners; CAR15 length corrected to 6.2".
