@@ -15,6 +15,9 @@
     x.restore();
     x.save(); x.strokeStyle = 'rgba(0,0,0,.85)'; x.lineWidth = 2; x.stroke(path); x.restore();
   }
+  const bevel = (x, path, w = 5) => { x.save(); x.clip(path);
+    x.translate(0, w * .55); x.strokeStyle = 'rgba(255,255,255,.13)'; x.lineWidth = w; x.stroke(path);
+    x.translate(0, -w * 1.1); x.strokeStyle = 'rgba(0,0,0,.35)'; x.lineWidth = w * 1.2; x.stroke(path); x.restore(); };
   const edgeHi = (x, pts, a = .22, w = 2) => { x.save(); x.strokeStyle = `rgba(255,255,255,${a})`; x.lineWidth = w; x.beginPath(); x.moveTo(I(pts[0][0]), I(pts[0][1])); for (const p of pts.slice(1)) x.lineTo(I(p[0]), I(p[1])); x.stroke(); x.restore(); };
   const groove = (x, x1, y1, x2, y2, w = 3) => { x.save(); x.lineCap = 'round'; x.strokeStyle = 'rgba(0,0,0,.6)'; x.lineWidth = w; x.beginPath(); x.moveTo(I(x1), I(y1)); x.lineTo(I(x2), I(y2)); x.stroke(); x.strokeStyle = 'rgba(255,255,255,.12)'; x.lineWidth = 1; x.beginPath(); x.moveTo(I(x1), I(y1) + w * .7); x.lineTo(I(x2), I(y2) + w * .7); x.stroke(); x.restore(); };
   const socket = (x, cx, cy, r) => { // QD sling socket: raised boss + recessed cup
@@ -40,8 +43,11 @@
     body.lineTo(I(2.25), I(5.12)); body.quadraticCurveTo(I(2.05), I(5.4), I(1.75), I(5.42)); // strut down to the toe
     body.lineTo(I(.6), I(5.42)); body.lineTo(I(.6), I(.12)); body.closePath();
     // open triangle between the rear section, the housing and the strut
-    const win = new Path2D(); win.moveTo(I(1.75), I(1.75)); win.lineTo(I(4.55), I(1.75)); win.quadraticCurveTo(I(4.7), I(1.78), I(4.55), I(1.95)); win.lineTo(I(1.95), I(4.8)); win.quadraticCurveTo(I(1.75), I(4.95), I(1.75), I(4.7)); win.closePath();
+    const win = new Path2D(); win.moveTo(I(2.05), I(1.75)); win.lineTo(I(4.4), I(1.75)); win.quadraticCurveTo(I(4.78), I(1.76), I(4.52), I(2.05)); win.lineTo(I(2.0), I(4.72)); win.quadraticCurveTo(I(1.75), I(4.98), I(1.75), I(4.6)); win.lineTo(I(1.75), I(2.05)); win.quadraticCurveTo(I(1.75), I(1.75), I(2.05), I(1.75)); win.closePath();
     x.save(); polymer(x, body, 0, I(5.5)); x.globalCompositeOperation = 'destination-out'; x.fill(win); x.restore();
+    bevel(x, body, 6);
+    // the window's own edges catch light along the brace and shade under the housing
+    x.save(); x.clip(body); x.translate(0, -3); x.strokeStyle = 'rgba(255,255,255,.12)'; x.lineWidth = 5; x.stroke(win); x.translate(0, 6); x.strokeStyle = 'rgba(0,0,0,.4)'; x.lineWidth = 6; x.stroke(win); x.restore();
     x.save(); x.strokeStyle = 'rgba(0,0,0,.8)'; x.lineWidth = 2; x.stroke(win); x.restore();
     edgeHi(x, [[.7, .14], [L - .15, .07]], .3, 2.5);                                  // top edge catch-light
     edgeHi(x, [[1.8, 1.78], [4.5, 1.78]], .1, 1.5);
@@ -75,7 +81,7 @@
     p.lineTo(I(L - .1), I(1.78)); p.quadraticCurveTo(I(L - .12), I(1.98), I(L - .45), I(1.98)); // QD boss
     p.lineTo(I(1.3), I(1.98)); p.quadraticCurveTo(I(1.05), I(1.98), I(.95), I(1.62));
     p.lineTo(I(.18), I(1.5)); p.lineTo(I(.18), I(.06)); p.closePath();
-    polymer(x, p, 0, I(2.0), [36, 37, 39]);
+    polymer(x, p, 0, I(2.0), [36, 37, 39]); bevel(x, p, 5);
     // stepped rear lip
     const lip = new Path2D(); lip.rect(I(0), I(.14), I(.2), I(1.28)); polymer(x, lip, I(.14), I(1.42), [28, 29, 31], 0);
     edgeHi(x, [[.25, .08], [L - .14, .08]], .3, 2.5);
@@ -114,7 +120,15 @@
     const ringX = padIn + 1.45, collarX = padIn + (F.width - 70) / ppi;
     x.drawImage(FO, I(ringX), I(tubeYin - .68), I(collarX - ringX), I(1.36));
     x.drawImage(F, I(padIn), 0, I(F.width / ppi), I(Hh));
-    rubberPad(x, 0, .05, padIn + .04, Hh - .1, 11);
+    // butt pad flush against the rear plate: follow the plate's rear edge (the photo sees it slightly tilted)
+    { const W2 = c.width, H2 = c.height, dd = x.getImageData(0, 0, W2, H2).data, pts = [];
+      for (let y = Math.round(H2 * .18); y < H2 * .9; y += 3) for (let a = 0; a < W2 * .3; a++) if (dd[(y * W2 + a) * 4 + 3] > 128) { pts.push([y, a]); break; }
+      const n = pts.length, my = pts.reduce((t, p) => t + p[0], 0) / n, ma = pts.reduce((t, p) => t + p[1], 0) / n; let sxy = 0, syy = 0; for (const [y, a] of pts) { sxy += (y - my) * (a - ma); syy += (y - my) ** 2; }
+      const b = sxy / syy, edge = (y) => ma + b * (y - my) + 3, t = I(.06), bt = H2 - I(.06), w = I(padIn), r = I(.22);
+      const pp = new Path2D(); pp.moveTo(edge(t) - w + r, t); pp.lineTo(edge(t), t); pp.lineTo(edge(bt), bt); pp.lineTo(edge(bt) - w + r, bt);
+      pp.quadraticCurveTo(edge(bt) - w, bt, edge(bt) - w, bt - r); pp.lineTo(edge(t) - w, t + r); pp.quadraticCurveTo(edge(t) - w, t, edge(t) - w + r, t); pp.closePath();
+      polymer(x, pp, t, bt, [30, 30, 31], 4);
+      x.save(); x.clip(pp); x.fillStyle = 'rgba(0,0,0,.45)'; for (let i = 1; i <= 11; i++) { const yy = t + ((bt - t) * i) / 12; x.fillRect(edge(yy) - w, yy - 2, w * .38, 4); } x.restore(); }
     IB.toneBlack(c, 34); IB.desat(c);
     return { c, len: +L.toFixed(2), hgt: +Hh.toFixed(2), tubeY: tubeYin / (Hh + .02), note: 'assembled from the exploded-parts photo: frame + foam cut from it, pad redrawn' };
   };
