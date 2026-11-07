@@ -11,7 +11,7 @@
     const g = x.createLinearGradient(0, y0, 0, y1), c = (k) => `rgb(${base.map((v) => Math.max(0, Math.min(255, Math.round(v * k)))).join(',')})`;
     g.addColorStop(0, c(1.9)); g.addColorStop(.06, c(1.35)); g.addColorStop(.35, c(1.05)); g.addColorStop(.8, c(.78)); g.addColorStop(1, c(.55));
     x.save(); x.fillStyle = g; x.fill(path); x.clip(path);
-    if (grain) { const W = x.canvas.width, H = x.canvas.height, n = (W * H) / 30; x.globalAlpha = .07; for (let i = 0; i < n; i++) { x.fillStyle = Math.random() < .5 ? '#fff' : '#000'; x.fillRect(Math.random() * W, Math.random() * H, 1.4, 1.4); } x.globalAlpha = 1; }
+    if (grain) { const W = x.canvas.width, H = x.canvas.height, n = (W * H) / 30; x.globalAlpha = .045; for (let i = 0; i < n; i++) { x.fillStyle = Math.random() < .5 ? '#777' : '#000'; x.fillRect(Math.random() * W, Math.random() * H, 1.2, 1.2); } x.globalAlpha = 1; }
     x.restore();
     x.save(); x.strokeStyle = 'rgba(0,0,0,.85)'; x.lineWidth = 2; x.stroke(path); x.restore();
   }
