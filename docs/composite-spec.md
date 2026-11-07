@@ -171,3 +171,32 @@ The handguard is always drawn over the barrel, barrel nut, gas tube, gas block, 
   - parts inside the rail go before the handguard
   - rail-mounted accessories (lights, foregrips, lasers, front sight) go after it
 - The order is written at the top of `compose()` in `render/site2d.js`.
+
+## 14. Buttstocks (v10)
+
+Every stock entry now carries its own real length and tube anchor instead of the old fixed 7" rule.
+
+- `size_in[0]` = overall length (maker spec where published). `size_in[1]` = true height, set only for 3/4-view photos (squares up the perspective).
+- `anchors.tubeY` = buffer-tube centreline as a fraction of the image height. For side photos: top edge at the front (median over 88–97 % of the width) + 0.10" wall + 0.575" tube radius. For 3/4 photos: centre of the visible tube opening.
+- `anchors.gap_in` = stock front edge behind the lower's rear at the bore line. Collapsible 1.25" (position 2 of 6); Sierra K 0.35" (compact tube, collapsed); fixed carbine Bravo-C 1.9"; MPS 2.0" (on a Picatinny adapter); ARFX 0.1" (rifle collar at the end plate); AK folder 0.3" (no AR mount — placement only).
+- `anchors.tube_in` = receiver extension drawn under the stock: carbine 7.6" default, compact 5.0" (Sierra K), rifle 9.8" (ARFX).
+- Cut: `cutStrict` at up to 1400 px from the full-size original, `keepMain`, `trimSafe`. Black-tone only when median lum < 75 **and** median saturation < 16 (OD green / FDE keep their colour). See-through openings: only enclosed near-white low-colour blobs (`holesWhite`).
+- All PSA photos have the butt on the left, so no flips were needed.
+
+| Stock | Length | Source of length | Photo |
+|---|---|---|---|
+| PSA Classic M4 ODG | 7.0 | M4 standard | [0] side |
+| Magpul MOE TR ODG | 7.0 | PSA spec | [0] 3/4, black photo recoloured to ODG sampled from the B5 Bravo-C |
+| B5 Bravo-C ODG | 8.74 | b5systems.com | [0] side |
+| B5 Sierra K Coyote | 5.63 | b5systems.com | [0] side |
+| H&R Retro CAR15 | 6.9 | estimate | [0] side |
+| Magpul DT Coyote | 7.0 × 5.3 | magpul.com | [0] 3/4 |
+| B5 Enhanced SOPMOD FDE | 7.40 | distributor spec | [0] side |
+| B5 "Folding Stock" (AKM-1485) | 9.0 | distributor spec | [0] side |
+| B5 MPS ODG | 8.06 | distributor spec | [0] side (small source photo) |
+| B5 CPS Short OD | 8.5 | b5systems.com | [0] side |
+| Luth-AR MBA-5 | 7.9 | estimate from LOP | **recreated** (only a lifestyle photo) |
+| Reptilia RECC-E QD front end | 2.35 | estimate | **recreated** (only a rear 3/4 view); module only |
+| Doublestar ARFX | 11.24 | from photo scale, 4.6" plate | **assembled**: frame + foam cut from the exploded photo, pad redrawn |
+
+Recreations live in `render/recreate-stocks.js` (100 px/in, black polymer sampled from the photos).

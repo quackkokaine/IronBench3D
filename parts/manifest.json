@@ -227,23 +227,24 @@
    "slot": "stock",
    "img": "parts/img/stock/psa-classic-m4-stock-odg.webp",
    "px": [
-    313,
-    249
+    803,
+    639
    ],
    "size_in": [
     7,
     null
    ],
    "anchors": {
-    "tubeTopOffset_in": -0.08,
-    "gapBehindTower_in": 1.25
+    "tubeY": 0.1353,
+    "frontX": 1,
+    "gap_in": 1.25
    },
    "source": {
-    "url": "https://palmettostatearmory.com/media/catalog/product/cache/7af8331bf1196ca28793bd1e8f6ecc7b/a/d/ad49317b-a2be-4d23-be36-62232d7b29fc.jpg",
+    "url": "https://palmettostatearmory.com/media/catalog/product/a/d/ad49317b-a2be-4d23-be36-62232d7b29fc.jpg",
     "gallery_index": 0,
     "flipped": false
    },
-   "bytes": 12270
+   "bytes": 66446
   },
   "luth-ar-a2-pistol-grip-black": {
    "id": "luth-ar-a2-pistol-grip-black",
@@ -368,6 +369,304 @@
     "flipped": false
    },
    "bytes": 7700
+  },
+  "magpul-moe-tr-carbine-stock-mil-spec-od-green": {
+   "id": "magpul-moe-tr-carbine-stock-mil-spec-od-green",
+   "slot": "stock",
+   "img": "parts/img/stock/magpul-moe-tr-carbine-stock-mil-spec-od-green.webp",
+   "px": [
+    900,
+    737
+   ],
+   "size_in": [
+    7,
+    null
+   ],
+   "anchors": {
+    "tubeY": 0.29,
+    "frontX": 1,
+    "gap_in": 1.25
+   },
+   "source": {
+    "url": "https://palmettostatearmory.com/media/catalog/product/5/1/516551736278_1.png",
+    "gallery_index": 0,
+    "flipped": false,
+    "recolored_to": [
+     71,
+     68,
+     53
+    ]
+   },
+   "bytes": 39320
+  },
+  "b5-systems-bravo-c-fixed-stock-od-green": {
+   "id": "b5-systems-bravo-c-fixed-stock-od-green",
+   "slot": "stock",
+   "img": "parts/img/stock/b5-systems-bravo-c-fixed-stock-od-green.webp",
+   "px": [
+    818,
+    456
+   ],
+   "size_in": [
+    8.74,
+    null
+   ],
+   "anchors": {
+    "tubeY": 0.1429,
+    "frontX": 1,
+    "gap_in": 1.9
+   },
+   "source": {
+    "url": "https://palmettostatearmory.com/media/catalog/product/1/b/1bbrc1444_1.jpg",
+    "gallery_index": 0,
+    "flipped": false
+   },
+   "bytes": 39040
+  },
+  "b5-systems-sierra-k-stock-coyote-brown-srk-1657": {
+   "id": "b5-systems-sierra-k-stock-coyote-brown-srk-1657",
+   "slot": "stock",
+   "img": "parts/img/stock/b5-systems-sierra-k-stock-coyote-brown-srk-1657.webp",
+   "px": [
+    899,
+    598
+   ],
+   "size_in": [
+    5.63,
+    null
+   ],
+   "anchors": {
+    "tubeY": 0.1802,
+    "frontX": 1,
+    "gap_in": 0.35,
+    "tube_in": 5
+   },
+   "source": {
+    "url": "https://palmettostatearmory.com/media/catalog/product/5/1/51655190772_042525_1.jpg",
+    "gallery_index": 0,
+    "flipped": false
+   },
+   "bytes": 116562
+  },
+  "h-r-retro-car15-stock-tiger-stripe": {
+   "id": "h-r-retro-car15-stock-tiger-stripe",
+   "slot": "stock",
+   "img": "parts/img/stock/h-r-retro-car15-stock-tiger-stripe.webp",
+   "px": [
+    900,
+    589
+   ],
+   "size_in": [
+    6.9,
+    null
+   ],
+   "anchors": {
+    "tubeY": 0.2167,
+    "frontX": 1,
+    "gap_in": 1.25
+   },
+   "source": {
+    "url": "https://palmettostatearmory.com/media/catalog/product/h/r/hr51655207880_6525_1.jpg",
+    "gallery_index": 0,
+    "flipped": false
+   },
+   "bytes": 70986
+  },
+  "magpul-dt-carbine-stock-coyote-brown-mpimag1377mcb": {
+   "id": "magpul-dt-carbine-stock-coyote-brown-mpimag1377mcb",
+   "slot": "stock",
+   "img": "parts/img/stock/magpul-dt-carbine-stock-coyote-brown-mpimag1377mcb.webp",
+   "px": [
+    697,
+    585
+   ],
+   "size_in": [
+    7,
+    5.3
+   ],
+   "anchors": {
+    "tubeY": 0.31,
+    "frontX": 1,
+    "gap_in": 1.25
+   },
+   "source": {
+    "url": "https://palmettostatearmory.com/media/catalog/product/5/1/51655235850_1.jpg",
+    "gallery_index": 0,
+    "flipped": false
+   },
+   "bytes": 32222
+  },
+  "b5-systems-mil-spec-enhanced-sopmod-collapsible-stock-flat-dark-earth": {
+   "id": "b5-systems-mil-spec-enhanced-sopmod-collapsible-stock-flat-dark-earth",
+   "slot": "stock",
+   "img": "parts/img/stock/b5-systems-mil-spec-enhanced-sopmod-collapsible-stock-flat-dark-earth.webp",
+   "px": [
+    816,
+    541
+   ],
+   "size_in": [
+    7.4,
+    null
+   ],
+   "anchors": {
+    "tubeY": 0.1394,
+    "frontX": 1,
+    "gap_in": 1.25
+   },
+   "source": {
+    "url": "https://palmettostatearmory.com/media/catalog/product/1/0/100016915_1.jpg",
+    "gallery_index": 0,
+    "flipped": false
+   },
+   "bytes": 46538
+  },
+  "b5-systems-folding-stock-black": {
+   "id": "b5-systems-folding-stock-black",
+   "slot": "stock",
+   "img": "parts/img/stock/b5-systems-folding-stock-black.webp",
+   "px": [
+    746,
+    359
+   ],
+   "size_in": [
+    9,
+    null
+   ],
+   "anchors": {
+    "tubeY": 0.1698,
+    "frontX": 1,
+    "gap_in": 0.3
+   },
+   "source": {
+    "url": "https://palmettostatearmory.com/media/catalog/product/B/5/B5AKM-1485_1.jpg",
+    "gallery_index": 0,
+    "flipped": false
+   },
+   "bytes": 10576
+  },
+  "b5-systems-modular-picatinny-stock-odg-mps-1556": {
+   "id": "b5-systems-modular-picatinny-stock-odg-mps-1556",
+   "slot": "stock",
+   "img": "parts/img/stock/b5-systems-modular-picatinny-stock-odg-mps-1556.webp",
+   "px": [
+    344,
+    199
+   ],
+   "size_in": [
+    8.06,
+    null
+   ],
+   "anchors": {
+    "tubeY": 0.1548,
+    "frontX": 1,
+    "gap_in": 2
+   },
+   "source": {
+    "url": "https://palmettostatearmory.com/media/catalog/product/5/1/51655238937.jpg",
+    "gallery_index": 0,
+    "flipped": false
+   },
+   "bytes": 6198
+  },
+  "b5-systems-short-collapsible-precision-stock-olive-drab": {
+   "id": "b5-systems-short-collapsible-precision-stock-olive-drab",
+   "slot": "stock",
+   "img": "parts/img/stock/b5-systems-short-collapsible-precision-stock-olive-drab.webp",
+   "px": [
+    784,
+    404
+   ],
+   "size_in": [
+    8.5,
+    null
+   ],
+   "anchors": {
+    "tubeY": 0.2061,
+    "frontX": 1,
+    "gap_in": 1.25
+   },
+   "source": {
+    "url": "https://palmettostatearmory.com/media/catalog/product/1/0/100036227_1.jpg",
+    "gallery_index": 0,
+    "flipped": false
+   },
+   "bytes": 32552
+  },
+  "luth-ar-mba-5-collapsible-buttstock-black": {
+   "id": "luth-ar-mba-5-collapsible-buttstock-black",
+   "slot": "stock",
+   "img": "parts/img/stock/luth-ar-mba-5-collapsible-buttstock-black.webp",
+   "px": [
+    790,
+    585
+   ],
+   "size_in": [
+    7.9,
+    null
+   ],
+   "anchors": {
+    "tubeY": 0.1154,
+    "frontX": 1,
+    "gap_in": 1.25
+   },
+   "source": {
+    "url": "https://palmettostatearmory.com/media/catalog/product/4/3/430107603_1.jpg",
+    "gallery_index": 0,
+    "flipped": false,
+    "recreated": "recreated: PSA photo is a lifestyle shot"
+   },
+   "bytes": 11290
+  },
+  "reptilia-recca-e-carbine-stock-qd-front-end-black": {
+   "id": "reptilia-recca-e-carbine-stock-qd-front-end-black",
+   "slot": "stock",
+   "img": "parts/img/stock/reptilia-recca-e-carbine-stock-qd-front-end-black.webp",
+   "px": [
+    235,
+    205
+   ],
+   "size_in": [
+    2.35,
+    null
+   ],
+   "anchors": {
+    "tubeY": 0.3293,
+    "frontX": 1,
+    "gap_in": 1.25
+   },
+   "source": {
+    "url": "https://palmettostatearmory.com/media/catalog/product/4/3/430104165_1.jpg",
+    "gallery_index": 0,
+    "flipped": false,
+    "recreated": "recreated: PSA only shows a rear 3/4 view; module only"
+   },
+   "bytes": 2880
+  },
+  "doublestar-corp-arfx-skeleton-stock-black": {
+   "id": "doublestar-corp-arfx-skeleton-stock-black",
+   "slot": "stock",
+   "img": "parts/img/stock/doublestar-corp-arfx-skeleton-stock-black.webp",
+   "px": [
+    900,
+    370
+   ],
+   "size_in": [
+    11.24,
+    null
+   ],
+   "anchors": {
+    "tubeY": 0.1692,
+    "frontX": 1,
+    "gap_in": 0.1,
+    "tube_in": 9.8
+   },
+   "source": {
+    "url": "https://palmettostatearmory.com/media/catalog/product/1/0/100000809_1.jpg",
+    "gallery_index": 0,
+    "flipped": false,
+    "recreated": "assembled from the exploded-parts photo: frame + foam cut from it, pad redrawn"
+   },
+   "bytes": 24750
   }
  },
  "generated": "2026-11-06T23:02:12.931Z"
