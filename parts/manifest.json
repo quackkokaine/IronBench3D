@@ -375,15 +375,15 @@
    "slot": "stock",
    "img": "parts/img/stock/magpul-moe-tr-carbine-stock-mil-spec-od-green.webp",
    "px": [
-    900,
-    737
+    883,
+    900
    ],
    "size_in": [
-    7,
-    null
+    7.0,
+    5.3
    ],
    "anchors": {
-    "tubeY": 0.29,
+    "tubeY": 0.1094,
     "frontX": 1,
     "gap_in": 1.25
    },
@@ -395,9 +395,10 @@
      71,
      68,
      53
-    ]
+    ],
+    "adjusted": "3/4 photo levelled and its front face removed to read as a side profile"
    },
-   "bytes": 39320
+   "bytes": 38106
   },
   "b5-systems-bravo-c-fixed-stock-od-green": {
    "id": "b5-systems-bravo-c-fixed-stock-od-green",
@@ -477,24 +478,25 @@
    "slot": "stock",
    "img": "parts/img/stock/magpul-dt-carbine-stock-coyote-brown-mpimag1377mcb.webp",
    "px": [
-    697,
-    585
+    553,
+    561
    ],
    "size_in": [
-    7,
+    7.0,
     5.3
    ],
    "anchors": {
-    "tubeY": 0.31,
+    "tubeY": 0.1095,
     "frontX": 1,
     "gap_in": 1.25
    },
    "source": {
     "url": "https://palmettostatearmory.com/media/catalog/product/5/1/51655235850_1.jpg",
     "gallery_index": 0,
-    "flipped": false
+    "flipped": false,
+    "adjusted": "3/4 photo levelled and its front face removed to read as a side profile"
    },
-   "bytes": 32222
+   "bytes": 27690
   },
   "b5-systems-mil-spec-enhanced-sopmod-collapsible-stock-flat-dark-earth": {
    "id": "b5-systems-mil-spec-enhanced-sopmod-collapsible-stock-flat-dark-earth",
@@ -615,7 +617,7 @@
     "flipped": false,
     "recreated": "recreated: PSA photo is a lifestyle shot"
    },
-   "bytes": 11290
+   "bytes": 14638
   },
   "reptilia-recca-e-carbine-stock-qd-front-end-black": {
    "id": "reptilia-recca-e-carbine-stock-qd-front-end-black",
@@ -640,7 +642,7 @@
     "flipped": false,
     "recreated": "recreated: PSA only shows a rear 3/4 view; module only"
    },
-   "bytes": 2880
+   "bytes": 2956
   },
   "doublestar-corp-arfx-skeleton-stock-black": {
    "id": "doublestar-corp-arfx-skeleton-stock-black",
@@ -666,7 +668,7 @@
     "flipped": false,
     "recreated": "assembled from the exploded-parts photo: frame + foam cut from it, pad redrawn"
    },
-   "bytes": 24750
+   "bytes": 23354
   }
  },
  "generated": "2026-11-06T23:02:12.931Z"
