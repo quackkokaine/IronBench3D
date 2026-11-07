@@ -13,13 +13,13 @@
   // ---------------- data ----------------
   IB2D.init = async () => {
     try {
-      const r = await fetch('parts/manifest.json', { cache: 'no-cache' });
+      const r = await fetch((IB2D.base || '') + 'parts/manifest.json', { cache: 'no-cache' });
       if (!r.ok) return false;
       MAN = await r.json();
       if (!MAN.parts || !Object.keys(MAN.parts).length) return false;
     } catch (e) { return false; }
     try {
-      const t = await (await fetch('data/psa_barrel_threads.txt')).text();
+      const t = await (await fetch((IB2D.base || '') + 'data/psa_barrel_threads.txt')).text();
       t.split('\n').forEach((l) => { if (!l || l[0] === '#') return; const [slug, pitch, src] = l.split('|'); THREADS[slug] = { pitch, src }; });
     } catch (e) {}
     // make sure a layer can actually be read (pixels must not be tainted)
@@ -53,10 +53,12 @@
         catch (err) { delete cache[e.id]; rej(err); }
       };
       img.onerror = () => { delete cache[e.id]; rej(new Error('layer failed: ' + e.img)); };
-      img.src = e.img + '?v=' + (e.bytes || '') + (e.px ? '-' + e.px.join('x') : '');   // cache-bust when a layer is re-exported
+      img.crossOrigin = 'anonymous';
+      img.src = /^(data|blob):/.test(e.img) ? e.img : (IB2D.base || '') + e.img + '?v=' + (e.bytes || '') + (e.px ? '-' + e.px.join('x') : '');   // cache-bust when a layer is re-exported
     }));
   }
   IB2D.clearCache = () => { for (const k in cache) delete cache[k]; };
+  IB2D._man = () => MAN;   // inspection / local preview hook
 
   // ---------------- helpers ----------------
   function mask(c) {
@@ -170,13 +172,26 @@
     const boreY = tc.length ? upy(tc.sort((a, b) => a - b)[tc.length >> 1]) : upy(uRailRow + bodyH * .42);
 
     // buffer tube, stock, castle nut
-    const tubeR = IN(.575), tubeFront = towerFrontX - IN(.3), tubeBack = tubeFront - IN(7.6);
+    // receiver extension: carbine 7.6" by default; a stock can name its own (compact 5", rifle 9.8")
+    const tubeLen = (St && St.a.tube_in) || 7.6;
+    const tubeR = IN(.575), tubeFront = towerFrontX - IN(.3), tubeBack = tubeFront - IN(tubeLen);
     L.fillStyle = blk(boreY, tubeR); L.beginPath(); L.roundRect(tubeBack, boreY - tubeR, tubeFront - tubeBack, tubeR * 2, 4); L.fill();
     boxes.buffertube = [tubeBack, boreY - tubeR, tubeFront - tubeBack, tubeR * 2];
     const rowL = Math.round((boreY - lY) / sL); let towerRear = lX;
     { const cx = Lw.c.getContext('2d', { willReadFrequently: true }).getImageData(0, Math.max(0, Math.min(Lw.c.height - 1, rowL)), LW, 1).data; for (let a = 0; a < LW; a++) if (cx[a * 4 + 3] > 100) { towerRear = lpx(a); break; } }
     let rearMost = tubeBack;
-    if (St) { const dSt = fit(St, 7.0); const sx = towerRear - IN(1.25) - dSt.w; draw('stock', St, dSt, sx, boreY - tubeR - IN(.08)); rearMost = Math.min(rearMost, sx); }
+    // stock: real length from the manifest (size_in[0]); optional true height (size_in[1]) squares up 3/4-view photos.
+    // anchors.tubeY = tube centreline as a fraction of the image height, anchors.frontX = front edge as a fraction
+    // of its width, anchors.gap_in = how far the stock front sits behind the receiver's rear at the bore line
+    // (collapsible ~1.25" = position 2 of 6; fixed rifle ~0.1"). Older entries fall back to the M4 rule.
+    if (St) {
+      const a = St.a, si = St.e.size_in || [7.0, null];
+      const dSt = fit(St, si[0] || 7.0); if (si[1]) dSt.h = IN(si[1]);
+      const fx = (a.frontX ?? 1) * dSt.w;
+      const sx = towerRear - IN(a.gap_in ?? a.gapBehindTower_in ?? 1.25) - fx;
+      const sy = a.tubeY != null ? boreY - a.tubeY * dSt.h : boreY - tubeR + IN(a.tubeTopOffset_in ?? -.08);
+      draw('stock', St, dSt, sx, sy); rearMost = Math.min(rearMost, sx);
+    }
     L.fillStyle = blk(boreY, IN(.7)); L.fillRect(towerRear - IN(.12), boreY - IN(.68), IN(.16), IN(1.36)); L.fillRect(towerRear - IN(.55), boreY - IN(.62), IN(.42), IN(1.24));
     L.fillStyle = 'rgba(255,255,255,.08)'; for (let i = 0; i < 4; i++) L.fillRect(towerRear - IN(.53) + i * IN(.1), boreY - IN(.62), IN(.03), IN(1.24));
 
